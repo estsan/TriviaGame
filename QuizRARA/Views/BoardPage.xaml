@@ -1,0 +1,212 @@
+﻿<Page
+    x:Class="TriviaGame.BoardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TriviaGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!-- Here is where the game board is -->
+    <Grid Background="#FFDFEAC3">
+
+
+        <NavigationView x:Name="NavView"
+                        IsBackButtonVisible="Collapsed"
+                        IsSettingsVisible="false"
+                        IsPaneOpen="false"
+                        Background="#FFDFEAC3">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Contact" 
+                                    Foreground="Red" 
+                                    Tag="player1"
+                                    IsEnabled="false"
+                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                    <!--<NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE10F;"/>
+                    </NavigationViewItem.Icon>-->
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Phatchari" Foreground="Black"/>
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE734;" Foreground="Green"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Blue"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Red"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Purple"/>
+                        </StackPanel>
+                    </StackPanel>
+                </NavigationViewItem>
+
+                <NavigationViewItem Icon="Contact" 
+                                    Foreground="Blue" 
+                                    Tag="player2"
+                                    IsEnabled="false"
+                                    IsSelected="{Binding ElementName=player2, Path=IsSelected, Mode=TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Lovedeep" Foreground="Black"/>
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE734;" Foreground="Green"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Blue"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Red"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Purple"/>
+                        </StackPanel>
+                    </StackPanel>
+                </NavigationViewItem>
+
+                <NavigationViewItem Icon="Contact" 
+                                    Foreground="DarkGoldenrod" 
+                                    Tag="player3" 
+                                    IsEnabled="false"
+                                    IsSelected="{Binding ElementName=player3, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Ester" Foreground="Black"/>
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE734;" Foreground="Green"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Blue"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Red"/>
+                            <FontIcon Glyph="&#xE735;" Foreground="Purple"/>
+                        </StackPanel>
+                    </StackPanel>
+                </NavigationViewItem>
+
+            </NavigationView.MenuItems>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Grid.Row="1" Grid.Column="1" Stroke="Green" StrokeThickness="10"/>
+                <Rectangle Grid.Row="1" Grid.Column="2" Stroke="Blue" StrokeThickness="10"/>
+                <Rectangle Grid.Row="1" Grid.Column="3" Stroke="DeepPink" StrokeThickness="10"/>
+                <Rectangle Grid.Row="1" Grid.Column="4" Stroke="DarkGoldenrod" StrokeThickness="10"/>
+                <Rectangle Grid.Row="1" Grid.Column="5" Stroke="Red" StrokeThickness="10"/>
+                <Rectangle Grid.Row="1" Grid.Column="6" Stroke="Purple" StrokeThickness="10"/>
+                <Rectangle Grid.Row="1" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
+                <Rectangle Grid.Row="2" Grid.Column="1" Stroke="Purple" StrokeThickness="10"/>
+                <Rectangle Grid.Row="2" Grid.Column="7" Stroke="Blue" StrokeThickness="10"/>
+                <Rectangle Grid.Row="3" Grid.Column="1" Stroke="Red" StrokeThickness="10"/>
+                <Rectangle Grid.Row="3" Grid.Column="7" Stroke="DeepPink" StrokeThickness="10"/>
+                <Rectangle Grid.Row="4" Grid.Column="1" Stroke="DarkGoldenrod" StrokeThickness="10"/>
+                <Rectangle Grid.Row="4" Grid.Column="7" Stroke="DarkGoldenrod" StrokeThickness="10"/>
+                <Rectangle Grid.Row="5" Grid.Column="1" Stroke="DeepPink" StrokeThickness="10"/>
+                <Rectangle Grid.Row="5" Grid.Column="7" Stroke="Red" StrokeThickness="10"/>
+                <Rectangle Grid.Row="6" Grid.Column="1" Stroke="Blue" StrokeThickness="10"/>
+                <Rectangle Grid.Row="6" Grid.Column="7" Stroke="Purple" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="1" Stroke="Green" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="2" Stroke="Purple" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="3" Stroke="Red" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="4" Stroke="DarkGoldenrod" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="5" Stroke="DeepPink" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="6" Stroke="Blue" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
+
+                <!-- Is supposed to Be a die, and animate when button is clicked -->
+                <ComboBox Grid.Row="0"
+                          Grid.Column="2" 
+                          Name="comboBox"
+                          VerticalAlignment="Center">
+                    <ComboBoxItem Name="player1" Content="player1"/>
+                    <ComboBoxItem Name="player2" Content="player2"/>
+                    <ComboBoxItem Name="player3" Content="player3"/>
+                </ComboBox>
+
+                <StackPanel Grid.Row="3"
+                            Grid.Column="4" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom">
+                    <TextBlock Text="{Binding ElementName=comboBox, Path=SelectedItem.Content}"/>
+
+                    <TextBlock Text="Player 1" />
+                </StackPanel>
+
+                <Button Grid.Row="4"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        x:Name="pl2"
+                        Content="Roll"
+                        Click="RollDie"/>
+
+                <TextBlock 
+                    Grid.Row="5"
+                    Grid.Column="4"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="40"
+                    Text="{Binding Game.Die}"
+                    Foreground="Green"
+                    x:Name="die"/>
+
+                <Button Grid.Row="2" 
+                        Grid.Column="2" 
+                        Grid.ColumnSpan="2"
+                        Content="Get Question"
+                        Click="GetQuestion">
+                </Button>
+
+
+
+
+
+                <!-- To be set elsewhere one time: Foreground, T -->
+                <!-- To be set elsewhere Again and again: Grid.Row, Grid.Column -->
+
+                <!-- To be set with binding, Tag {Player name}, Grid.Row {Position[0]}, Grid.Row {Position[1]}, Foreground {Color} -->
+                <FontIcon Glyph="&#xEA8C;"
+                          Foreground="#FFDFEAC3"
+                          Tag="player1"/>
+                <FontIcon Glyph="&#xE77B;" 
+                          Foreground="#FFDFEAC3"
+                          Tag="player1"/>
+
+                <FontIcon Glyph="&#xEA8C;"
+                          Foreground="#FFDFEAC3"
+                          Tag="player2"/>
+                <FontIcon Glyph="&#xE77B;" 
+                          Foreground="#FFDFEAC3"
+                          Tag="player2"/>
+
+                <FontIcon Glyph="&#xEA8C;"
+                          Foreground="#FFDFEAC3"
+                          Tag="player3"/>
+                <FontIcon Glyph="&#xE77B;" 
+                          Foreground="#FFDFEAC3"
+                          Tag="player3"/>
+
+                <FontIcon Glyph="&#xEA8C;"
+                          Foreground="#FFDFEAC3"
+                          Tag="player4"/>
+                <FontIcon Glyph="&#xE77B;" 
+                          Foreground="#FFDFEAC3"
+                          Tag="player4"/>
+
+            </Grid>
+        </NavigationView>
+    </Grid>
+</Page>
