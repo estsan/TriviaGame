@@ -39,10 +39,33 @@ namespace TriviaGame
             }
         }
 
-        private void GetQuestion(object sender, RoutedEventArgs e)
+        private async void GetQuestion(object sender, RoutedEventArgs e)
         {
+            string category = "12";
+            string difficulty = "easy";
             _gameViewModel = new GameViewModel();
-            _gameViewModel.CreateQuestion();
+            _resultObject = await _gameViewModel.CreateQuestion(category, difficulty);
+            List<string> answers = new List<string> {
+                _resultObject.Results[0].CorrectAnswer + " RÄTT",
+                _resultObject.Results[0].IncorrectAnswers[0],
+                _resultObject.Results[0].IncorrectAnswers[1],
+                _resultObject.Results[0].IncorrectAnswers[2] };
+            asdf.Text = _resultObject.Results[0].Question;
+            Random random = new Random();
+
+            int index = random.Next(0, answers.Count);
+            a.Content = answers[index];
+            answers.RemoveAt(index);
+
+            index = random.Next(0, answers.Count);
+            s.Content = answers[index];
+            answers.RemoveAt(index);
+
+            index = random.Next(0, answers.Count);
+            d.Content = answers[index];
+            answers.RemoveAt(index);
+
+            f.Content = answers[0];
         }
     }
 }

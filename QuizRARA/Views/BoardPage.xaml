@@ -127,17 +127,17 @@
                 <Rectangle Grid.Row="7" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
 
                 <!-- Is supposed to Be a die, and animate when button is clicked -->
-                <ComboBox Grid.Row="0"
+                <!--<ComboBox Grid.Row="0"
                           Grid.Column="2" 
                           Name="comboBox"
-                          VerticalAlignment="Center">
+                          VerticalAlignment="Bottom" Margin="0,0,0,39">
                     <ComboBoxItem Name="player1" Content="player1"/>
                     <ComboBoxItem Name="player2" Content="player2"/>
                     <ComboBoxItem Name="player3" Content="player3"/>
-                </ComboBox>
+                </ComboBox>-->
 
                 <StackPanel Grid.Row="3"
-                            Grid.Column="4" 
+                            Grid.Column="0" 
                             HorizontalAlignment="Center"
                             VerticalAlignment="Bottom">
                     <TextBlock Text="{Binding ElementName=comboBox, Path=SelectedItem.Content}"/>
@@ -146,8 +146,7 @@
                 </StackPanel>
 
                 <Button Grid.Row="4"
-                        Grid.Column="3"
-                        Grid.ColumnSpan="3"
+                        Grid.Column="0"
                         HorizontalAlignment="Center"
                         x:Name="pl2"
                         Content="Roll"
@@ -164,11 +163,47 @@
                     x:Name="die"/>
 
                 <Button Grid.Row="2" 
-                        Grid.Column="2" 
+                        Grid.Column="0" 
                         Grid.ColumnSpan="2"
                         Content="Get Question"
                         Click="GetQuestion">
                 </Button>
+
+                <TextBlock x:Name="asdf"
+                           Grid.Row="2"
+                           Grid.Column="3"
+                           Grid.ColumnSpan="3"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap"
+                           Text=""/>
+                <Button x:Name="a"
+                        Grid.Row="3"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Background="LightYellow"
+                        Content=""/>
+                <Button x:Name="s"
+                        Grid.Row="4"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Background="LightYellow"
+                        Content=""/>
+                <Button x:Name="d"
+                        Grid.Row="5"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Background="LightYellow"
+                        Content=""/>
+                <Button x:Name="f"
+                        Grid.Row="6"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Background="LightYellow"
+                        Content=""/>
 
 
 

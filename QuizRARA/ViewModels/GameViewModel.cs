@@ -10,10 +10,11 @@ namespace TriviaGame.ViewModels
     class GameViewModel
     {
         ResultObject _resultObject;
-        public void CreateQuestion()
+        public async Task<ResultObject> CreateQuestion(string category, string difficulty)
         {
             _resultObject = new ResultObject();
-            _resultObject.CreateQuestion();
+            await _resultObject.CreateQuestion(category, difficulty);
+            return _resultObject;
         }
     }
 }
