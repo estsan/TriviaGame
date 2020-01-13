@@ -9,6 +9,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <TextBlock 
+                Text="Game Result:"
+                FontSize="50"
+            TextAlignment="Center"
+                FontFamily="Consolas"
+                Foreground="#FF147E13"
+                TextDecorations="Underline" FocusVisualSecondaryBrush="#FF147E13" FontWeight="Bold"/>
+        
     </Grid>
 </Page>

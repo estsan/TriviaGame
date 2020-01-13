@@ -20,7 +20,7 @@ namespace TriviaGame
         public MainPage()
         {
             this.InitializeComponent();
-            ContentFrame.Navigate(typeof(BoardPage));
+            ContentFrame.Navigate(typeof(StartPage));
         }
     }
 }

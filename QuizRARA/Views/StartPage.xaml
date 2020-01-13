@@ -154,7 +154,7 @@
             </TextBlock>
         </Border>
         <!-- Fourth row -->
-        <Button 
+        <HyperlinkButton 
             Content="LETS PLAY" 
             Grid.Row="3" 
             Grid.ColumnSpan="2" 
@@ -171,7 +171,8 @@
             BorderBrush="#FF266C37" 
             FontWeight="Bold" 
             FontFamily="Candara" 
-            Visibility="Visible"/>
+            Visibility="Visible"
+            Click="HyperlinkButton_Click"/>
     </Grid>
 
 </Page>
