@@ -122,5 +122,9 @@ namespace TriviaGame
             // Har vi en vinnare?
             // Make ViewModel do this
         }
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(StartPage));
+        }
     }
 }
