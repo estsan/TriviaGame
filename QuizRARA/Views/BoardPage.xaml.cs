@@ -21,6 +21,7 @@ namespace TriviaGame
     {
         ResultObject _resultObject;
         GameViewModel _gameViewModel;
+        int category;
 
         public BoardPage()
         {
@@ -41,31 +42,85 @@ namespace TriviaGame
 
         private async void GetQuestion(object sender, RoutedEventArgs e)
         {
-            string category = "12";
+            string category = "19";
             string difficulty = "easy";
             _gameViewModel = new GameViewModel();
             _resultObject = await _gameViewModel.CreateQuestion(category, difficulty);
-            List<string> answers = new List<string> {
-                _resultObject.Results[0].CorrectAnswer + " RÄTT",
-                _resultObject.Results[0].IncorrectAnswers[0],
-                _resultObject.Results[0].IncorrectAnswers[1],
-                _resultObject.Results[0].IncorrectAnswers[2] };
+            Dictionary<string, string> answers = new Dictionary<string, string> { };
+            answers.Add(_resultObject.Results[0].CorrectAnswer, "Correct");
+            answers.Add(_resultObject.Results[0].IncorrectAnswers[0], "Incorrect");
+            answers.Add(_resultObject.Results[0].IncorrectAnswers[1], "Incorrect");
+            answers.Add(_resultObject.Results[0].IncorrectAnswers[2], "Incorrect");
+
             asdf.Text = _resultObject.Results[0].Question;
-            Random random = new Random();
+            asdf.Visibility = Visibility;
+            string[] value;
 
-            int index = random.Next(0, answers.Count);
-            a.Content = answers[index];
-            answers.RemoveAt(index);
+            value = RandomValue(answers);
+            a.Content = value[0];
+            a.Visibility = Visibility;
+            answers.Remove(value[0]);
+            if (value[1] == "Correct")
+                a.Tag = "Correct";
+            else
+                a.Tag = "";
 
-            index = random.Next(0, answers.Count);
-            s.Content = answers[index];
-            answers.RemoveAt(index);
+            value = RandomValue(answers);
+            s.Content = value[0];
+            s.Visibility = Visibility;
+            answers.Remove(value[0]);
+            if (value[1] == "Correct")
+                s.Tag = "Correct";
+            else
+                s.Tag = "";
 
-            index = random.Next(0, answers.Count);
-            d.Content = answers[index];
-            answers.RemoveAt(index);
+            value = RandomValue(answers);
+            d.Content = value[0];
+            d.Visibility = Visibility;
+            answers.Remove(value[0]);
+            if (value[1] == "Correct")
+                d.Tag = "Correct";
+            else
+                d.Tag = "";
 
-            f.Content = answers[0];
+            value = RandomValue(answers);
+            f.Content = value[0];
+            f.Visibility = Visibility;
+            answers.Remove(value[0]);
+            if (value[1] == "Correct")
+                f.Tag = "Correct";
+            else
+                f.Tag = "";
+        }
+
+        public string[] RandomValue(Dictionary<string,string> dict)
+        {
+            Random rand = new Random();
+            List<string> list = dict.Keys.ToList();
+            string key = list[rand.Next(0, list.Count)];
+            string[] KVP = { key, dict[key] };
+            return KVP;
+        }
+
+        private void Answer(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            
+            // Is it correct? Display if it is correct or not, also
+            if (button.Tag.ToString() == "Correct")
+            {
+                button.Content = "Rätt";
+            }
+            else
+            {
+                button.Content = "Fel";
+            }
+
+            _gameViewModel.Answer(category);
+            // Spara resultatet, yes eller nej
+            // Vems tur är det?
+            // Har vi en vinnare?
+            // Make ViewModel do this
         }
     }
 }

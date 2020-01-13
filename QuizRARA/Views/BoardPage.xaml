@@ -154,7 +154,7 @@
 
                 <TextBlock 
                     Grid.Row="5"
-                    Grid.Column="4"
+                    Grid.Column="0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     FontSize="40"
@@ -175,38 +175,45 @@
                            Grid.ColumnSpan="3"
                            HorizontalAlignment="Center"
                            TextWrapping="Wrap"
+                           Visibility="Collapsed"
+                           VerticalAlignment="Center"
                            Text=""/>
                 <Button x:Name="a"
                         Grid.Row="3"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
                         HorizontalAlignment="Center"
-                        Background="LightYellow"
-                        Content=""/>
+                        Background="HotPink"
+                        Content=""
+                        Visibility="Collapsed"
+                        Click="Answer"/>
                 <Button x:Name="s"
                         Grid.Row="4"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
                         HorizontalAlignment="Center"
-                        Background="LightYellow"
-                        Content=""/>
+                        Background="Bisque"
+                        Content=""
+                        Visibility="Collapsed"
+                        Click="Answer"/>
                 <Button x:Name="d"
                         Grid.Row="5"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
                         HorizontalAlignment="Center"
-                        Background="LightYellow"
-                        Content=""/>
+                        Background="Fuchsia"
+                        Content=""
+                        Visibility="Collapsed"
+                        Click="Answer"/>
                 <Button x:Name="f"
                         Grid.Row="6"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
                         HorizontalAlignment="Center"
-                        Background="LightYellow"
-                        Content=""/>
-
-
-
+                        Background="OliveDrab"
+                        Content=""
+                        Visibility="Collapsed"
+                        Click="Answer"/>
 
 
                 <!-- To be set elsewhere one time: Foreground, T -->
@@ -215,30 +222,39 @@
                 <!-- To be set with binding, Tag {Player name}, Grid.Row {Position[0]}, Grid.Row {Position[1]}, Foreground {Color} -->
                 <FontIcon Glyph="&#xEA8C;"
                           Foreground="#FFDFEAC3"
+                          Visibility="Collapsed"
                           Tag="player1"/>
                 <FontIcon Glyph="&#xE77B;" 
                           Foreground="#FFDFEAC3"
+                          Visibility="Collapsed"
                           Tag="player1"/>
 
+
                 <FontIcon Glyph="&#xEA8C;"
                           Foreground="#FFDFEAC3"
+                          Visibility="Collapsed"
                           Tag="player2"/>
                 <FontIcon Glyph="&#xE77B;" 
                           Foreground="#FFDFEAC3"
+                          Visibility="Collapsed"
                           Tag="player2"/>
 
                 <FontIcon Glyph="&#xEA8C;"
                           Foreground="#FFDFEAC3"
+                          Visibility="Collapsed"
                           Tag="player3"/>
                 <FontIcon Glyph="&#xE77B;" 
                           Foreground="#FFDFEAC3"
+                          Visibility="Collapsed"
                           Tag="player3"/>
 
                 <FontIcon Glyph="&#xEA8C;"
-                          Foreground="#FFDFEAC3"
+                          Foreground="Yellow"
+                          Visibility="Collapsed"
                           Tag="player4"/>
                 <FontIcon Glyph="&#xE77B;" 
-                          Foreground="#FFDFEAC3"
+                          Foreground="Black"
+                          Visibility="Collapsed"
                           Tag="player4"/>
 
             </Grid>

@@ -8,9 +8,19 @@ namespace TriviaGame.Models
 {
     class Game
     {
-        public List<Player> Players { get; set; }
+        public Dictionary<int, Player> Players { get; set; }
         public int Die { get; set; }
         public int NumberOfPlayers { get; set; }
+        int _whosTurnIsIt { get; set; }
+        public int WhosTurnIsIt
+        {
+            get { return this._whosTurnIsIt; }
+            set
+            {
+                if (_whosTurnIsIt <= NumberOfPlayers) { _whosTurnIsIt = 0; }
+                else { _whosTurnIsIt++; }
+            }
+        }
 
         public Game(string[] _names)
         {
@@ -20,12 +30,12 @@ namespace TriviaGame.Models
             {
                 string[] player = _name.Split(',');
                 Player p = new Player(player[0].Trim(), player[1].Trim(), NumberOfPlayers, i);
-                Players.Add(p);
+                Players.Add(i, p);
                 i++;
             }
 
+            WhosTurnIsIt = 0;
             Die = 0;
-
         }
     }
 }

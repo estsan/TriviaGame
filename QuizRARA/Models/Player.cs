@@ -8,6 +8,7 @@ namespace TriviaGame.Models
 {
     class Player
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
         public int[] Position { get; set; }
@@ -66,6 +67,8 @@ namespace TriviaGame.Models
                     Position = new int[2] { 7, 7 };
                 }
             }
+
+            Id = _numberOfPlayer;
 
             Red = false;
             Green = false;
