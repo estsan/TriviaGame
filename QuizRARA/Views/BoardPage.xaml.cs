@@ -67,5 +67,9 @@ namespace TriviaGame
 
             f.Content = answers[0];
         }
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(StartPage));
+        }
     }
 }

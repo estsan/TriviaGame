@@ -240,7 +240,25 @@
                 <FontIcon Glyph="&#xE77B;" 
                           Foreground="#FFDFEAC3"
                           Tag="player4"/>
-
+                <HyperlinkButton 
+            Content="GO BACK" 
+            Grid.Row="8" 
+            Grid.ColumnSpan="8" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            FontSize="24"
+            Height="51"
+            Width="250"
+            Foreground="#FF69946A"
+            Opacity="0.8" 
+            FocusVisualPrimaryBrush="#00000000" 
+            Background="#335DA94B" 
+            FocusVisualSecondaryBrush="#99265C1F" 
+            BorderBrush="#FF266C37" 
+            FontWeight="Bold" 
+            FontFamily="Candara" 
+            Visibility="Visible"
+            Click="HyperlinkButton_Click"/>
             </Grid>
         </NavigationView>
     </Grid>
