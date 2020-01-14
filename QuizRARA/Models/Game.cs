@@ -30,6 +30,7 @@ namespace TriviaGame.Models
             {
                 string[] player = _name.Split(',');
                 Player p = new Player(player[0].Trim(), player[1].Trim(), NumberOfPlayers, i);
+                Players = new Dictionary<int, Player>() { };
                 Players.Add(i, p);
                 i++;
             }

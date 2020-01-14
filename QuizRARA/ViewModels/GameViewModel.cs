@@ -21,10 +21,12 @@ namespace TriviaGame.ViewModels
         internal void Answer(int category)
         {
             // Spara resultatet, yes eller nej
+
+
             // Vems tur är det?
-            // Har vi en vinnare?
             _game.WhosTurnIsIt++;
-            // 
+             
+            // Har vi en vinnare?
             
         }
     }

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TriviaGame.Models;
 
 namespace TriviaGame
 {
@@ -20,13 +21,38 @@ namespace TriviaGame
     public sealed partial class StartPage : Page
     {
         GameViewModel _gameViewModel;
+        Game _game;
         public StartPage()
         {
             this.InitializeComponent();
+            string[] h = new string[] {"Ester,Red", "Love,Yellow"};
+            _game = new Game(h); //name,color
         }
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BoardPage));
+        }
+
+        private void AddPlayers(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox combobox = (ComboBox)sender;
+            ComboBoxItem comboboxItem = (ComboBoxItem)combobox.SelectedItem;
+            int num = int.Parse(comboboxItem.Content.ToString());
+
+            player1.Visibility = Visibility.Visible;
+            player2.Visibility = Visibility.Visible;
+            player3.Visibility = Visibility.Visible;
+            player4.Visibility = Visibility.Visible;
+
+            if (num < 4)
+            {
+                player4.Visibility = Visibility.Collapsed;
+            }
+            if ( num < 3)
+            {
+                player3.Visibility = Visibility.Collapsed;
+            }
+
         }
     }
 }
