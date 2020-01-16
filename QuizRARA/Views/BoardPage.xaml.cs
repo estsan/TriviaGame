@@ -28,8 +28,13 @@ namespace TriviaGame
             this.InitializeComponent();
             gameViewModel = new GameViewModel();
         }
-
-        private void RollDice(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            var param = (TextBox)e.Parameter;
+            player1.Text = param.Text;
+        }
+            private void RollDice(object sender, RoutedEventArgs e)
         {
             gameViewModel.RollDice();
             Dice.Text = gameViewModel.game.Dice.ToString();

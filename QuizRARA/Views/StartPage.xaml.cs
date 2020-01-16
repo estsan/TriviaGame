@@ -28,9 +28,12 @@ namespace TriviaGame
             string[] h = new string[] {"Ester,Red", "Love,Yellow"};
             _game = new Game(h); //name,color
         }
+       
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BoardPage));
+            string text1 = redplayer.Text;
+            
+            this.Frame.Navigate(typeof(BoardPage),redplayer);
         }
 
         private void AddPlayers(object sender, SelectionChangedEventArgs e)

@@ -73,7 +73,7 @@
                            FontSize="30"
                            Foreground="Red"
                            Width="120"/>
-                <TextBox 
+                <TextBox x:Name="redplayer"
                     PlaceholderText="Player 1"
                     Width="150"
                     Height="30"

@@ -46,7 +46,7 @@
                                     IsEnabled="false"
                                     IsSelected="{Binding ElementName=player2, Path=IsSelected, Mode=TwoWay, UpdateSourceTrigger = PropertyChanged}">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Lovedeep" Foreground="Black"/>
+                        <TextBlock x:Name="player1" Text="Lovedeep" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon Glyph="&#xE734;" Foreground="Green"/>
                             <FontIcon Glyph="&#xE735;" Foreground="Blue"/>
