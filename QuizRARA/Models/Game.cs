@@ -8,7 +8,7 @@ namespace TriviaGame.Models
 {
     public class Game
     {
-        public Dictionary<int, Player> Players { get; set; }
+        public Player[] Players { get; set; }
         public int Dice { get; set; }
         public int NumberOfPlayers { get; set; }
         int _whosTurnIsIt { get; set; }
@@ -26,12 +26,11 @@ namespace TriviaGame.Models
         {
             NumberOfPlayers = names.Length;
             string[] colors = { "Red", "Green", "Blue", "Yellow" };
+            Players = new Player[NumberOfPlayers];
             for (int i = 0; i < names.Length; i++)
             {
                 Player p = new Player(names[i], colors[i], NumberOfPlayers, i);
-                Players = new Dictionary<int, Player>() { };
-                Players.Add(i, p);
-                i++;
+                Players[i] = p;
             }
 
             WhosTurnIsIt = 0;

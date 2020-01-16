@@ -52,7 +52,8 @@
                 VerticalAlignment="Top" 
                 Width="226"
                 Background="Transparent"
-                SelectionChanged="AddPlayers">
+                SelectionChanged="AddPlayers"
+                x:Name="comboBoxNumber">
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
                 <ComboBoxItem Content="4"/>
@@ -80,7 +81,8 @@
                     Margin="51,0,0,15"
                     FontSize="20"
                     Background="Transparent"
-                    BorderThickness="0" />
+                    BorderThickness="0" 
+                    x:Name="player1TextBox"/>
             </StackPanel>
             <StackPanel x:Name="player2"
                         Orientation="Horizontal" 

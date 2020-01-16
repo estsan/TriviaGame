@@ -25,7 +25,7 @@ namespace TriviaGame
         public StartPage()
         {
             this.InitializeComponent();
-            string[] h = new string[] {"Ester,Red", "Love,Yellow"};
+            string[] h = new string[] {"Ester", "Love"};
             _game = new Game(h); //name,color
         }
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

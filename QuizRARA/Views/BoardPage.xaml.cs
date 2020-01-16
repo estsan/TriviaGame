@@ -21,12 +21,19 @@ namespace TriviaGame
     {
         ResultObject resultObject;
         GameViewModel gameViewModel;
-        int category;
 
         public BoardPage()
         {
             this.InitializeComponent();
-            gameViewModel = new GameViewModel();
+            string[] name = new string[] { "E", "L", "J" };
+            gameViewModel = new GameViewModel(name);
+            ItemPlayer1.Visibility = Visibility.Visible;
+            TextBlockPlayer1.Text = gameViewModel.game.Players[0].Name;
+            ItemPlayer2.Visibility = Visibility.Visible;
+            TextBlockPlayer2.Text = gameViewModel.game.Players[1].Name;
+            ItemPlayer3.Visibility = Visibility.Visible;
+            TextBlockPlayer3.Text = gameViewModel.game.Players[2].Name;
+            // Hårdkodat De olika spelarna. Blajblaj
         }
 
         private void RollDice(object sender, RoutedEventArgs e)
@@ -39,7 +46,6 @@ namespace TriviaGame
         {
             string category = "19";
             string difficulty = "easy";
-            gameViewModel = new GameViewModel();
             resultObject = await gameViewModel.CreateQuestion(category, difficulty);
             Dictionary<string, string> answers = new Dictionary<string, string> { };
             answers.Add(resultObject.Results[0].CorrectAnswer, "Correct");
@@ -111,7 +117,7 @@ namespace TriviaGame
                 button.Content = "Fel";
             }
 
-            gameViewModel.Answer(category);
+            gameViewModel.Answer(9);
             // Spara resultatet, yes eller nej
             // Vems tur är det?
             // Har vi en vinnare?

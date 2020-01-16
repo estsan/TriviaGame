@@ -19,62 +19,86 @@
                         Background="#FFDFEAC3">
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Contact" 
-                                    Foreground="Red" 
-                                    Tag="player1"
+
+                <!-- &#xE735; -->
+                <!-- Props som ska sättas vid initialisering: Item:Visibility, TextBlock:Text -->
+                <!-- Props som ska sättas under spelets gång: FontIcon: Glyph -->
+                <NavigationViewItem x:Name="ItemPlayer1"
+                                    Icon="Contact"
+                                    Foreground="Red"
+                                    Visibility="Collapsed"
                                     IsEnabled="false"
                                     IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
-                    <!--<NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE10F;"/>
-                    </NavigationViewItem.Icon>-->
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Phatchari" Foreground="Black"/>
+                        <TextBlock  x:Name="TextBlockPlayer1" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Blue"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Red"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Purple"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player1"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
 
-                <NavigationViewItem Icon="Contact" 
-                                    Foreground="Blue" 
-                                    Tag="player2"
+                <NavigationViewItem x:Name="ItemPlayer2"
+                                    Icon="Contact"
+                                    Foreground="Green"
+                                    Visibility="Collapsed"
                                     IsEnabled="false"
-                                    IsSelected="{Binding ElementName=player2, Path=IsSelected, Mode=TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Lovedeep" Foreground="Black"/>
+                        <TextBlock  x:Name="TextBlockPlayer2" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Blue"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Red"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Purple"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player2"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
 
-                <NavigationViewItem Icon="Contact" 
-                                    Foreground="DarkGoldenrod" 
-                                    Tag="player3" 
+                <NavigationViewItem x:Name="ItemPlayer3"
+                                    Icon="Contact"
+                                    Foreground="Blue"
+                                    Visibility="Collapsed"
                                     IsEnabled="false"
-                                    IsSelected="{Binding ElementName=player3, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Ester" Foreground="Black"/>
+                        <TextBlock  x:Name="TextBlockPlayer3" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Blue"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Red"/>
-                            <FontIcon Glyph="&#xE735;" Foreground="Purple"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player3"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
+
+                <NavigationViewItem x:Name="ItemPlayer4"
+                                    Icon="Contact"
+                                    Foreground="DarkGoldenrod"
+                                    Visibility="Collapsed"
+                                    IsEnabled="false"
+                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock  x:Name="TextBlockPlayer4" Foreground="Black"/>
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player4"/>
+                        </StackPanel>
+                    </StackPanel>
+                </NavigationViewItem>
+
 
             </NavigationView.MenuItems>
             <Grid>
