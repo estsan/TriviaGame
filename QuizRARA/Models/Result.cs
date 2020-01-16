@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TriviaGame.Models
 {
-    class Result
+    public class Result
     {
         [JsonProperty("category")]
         public string Category { get; set; }

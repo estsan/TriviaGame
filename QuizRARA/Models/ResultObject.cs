@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TriviaGame.Models
 {
-    class ResultObject
+    public class ResultObject
     {
         [JsonProperty("response_code")]
         public string ResponseCode { get; set; }

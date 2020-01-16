@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TriviaGame.Models
 {
-    class Player
+    public class Player
     {
         public int Id { get; set; }
         public string Name { get; set; }

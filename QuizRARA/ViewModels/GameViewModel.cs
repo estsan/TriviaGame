@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TriviaGame.ViewModels
 {
-    class GameViewModel
+    public class GameViewModel
     {
         ResultObject _resultObject;
         Game _game;
