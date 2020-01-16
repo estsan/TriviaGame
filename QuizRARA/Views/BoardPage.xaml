@@ -126,7 +126,7 @@
                 <Rectangle Grid.Row="7" Grid.Column="6" Stroke="Blue" StrokeThickness="10"/>
                 <Rectangle Grid.Row="7" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
 
-                <!-- Is supposed to Be a die, and animate when button is clicked -->
+                <!-- Is supposed to Be a dice, and animate when button is clicked -->
                 <!--<ComboBox Grid.Row="0"
                           Grid.Column="2" 
                           Name="comboBox"
@@ -150,7 +150,7 @@
                         HorizontalAlignment="Center"
                         x:Name="pl2"
                         Content="Roll"
-                        Click="RollDie"/>
+                        Click="RollDice"/>
 
                 <TextBlock 
                     Grid.Row="5"
@@ -158,9 +158,9 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     FontSize="40"
-                    Text="{Binding Game.Die}"
+                    Text="{Binding Game.Dice}"
                     Foreground="Green"
-                    x:Name="die"/>
+                    x:Name="dice"/>
 
                 <Button Grid.Row="2" 
                         Grid.Column="0" 

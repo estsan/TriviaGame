@@ -28,15 +28,15 @@ namespace TriviaGame
             this.InitializeComponent();
         }
 
-        private void RollDie(object sender, RoutedEventArgs e)
+        private void RollDice(object sender, RoutedEventArgs e)
         {
-            if (die.Text == "a")
+            if (dice.Text == "a")
             {
-                die.Text = "b";
+                dice.Text = "b";
             }
             else
             {
-                die.Text = "a";
+                dice.Text = "a";
             }
         }
 

@@ -24,7 +24,7 @@ namespace TriviaGame.ViewModels
 
 
             // Vems tur är det?
-            _game.WhosTurnIsIt++;
+            //_game.WhosTurnIsIt++;
              
             // Har vi en vinnare?
             

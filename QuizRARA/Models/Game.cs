@@ -9,7 +9,7 @@ namespace TriviaGame.Models
     public class Game
     {
         public Dictionary<int, Player> Players { get; set; }
-        public int Die { get; set; }
+        public int Dice { get; set; }
         public int NumberOfPlayers { get; set; }
         int _whosTurnIsIt { get; set; }
         public int WhosTurnIsIt
@@ -36,7 +36,7 @@ namespace TriviaGame.Models
             }
 
             WhosTurnIsIt = 0;
-            Die = 0;
+            Dice = 0;
         }
     }
 }
