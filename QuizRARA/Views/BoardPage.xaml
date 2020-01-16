@@ -158,9 +158,9 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     FontSize="40"
-                    Text="{Binding Game.Dice}"
+                    Text=""
                     Foreground="Green"
-                    x:Name="dice"/>
+                    x:Name="Dice"/>
 
                 <Button Grid.Row="2" 
                         Grid.Column="0" 

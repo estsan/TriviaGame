@@ -19,40 +19,35 @@ namespace TriviaGame
 {
     public sealed partial class BoardPage : Page
     {
-        ResultObject _resultObject;
-        GameViewModel _gameViewModel;
+        ResultObject resultObject;
+        GameViewModel gameViewModel;
         int category;
 
         public BoardPage()
         {
             this.InitializeComponent();
+            gameViewModel = new GameViewModel();
         }
 
         private void RollDice(object sender, RoutedEventArgs e)
         {
-            if (dice.Text == "a")
-            {
-                dice.Text = "b";
-            }
-            else
-            {
-                dice.Text = "a";
-            }
+            gameViewModel.RollDice();
+            Dice.Text = gameViewModel.game.Dice.ToString();
         }
 
         private async void GetQuestion(object sender, RoutedEventArgs e)
         {
             string category = "19";
             string difficulty = "easy";
-            _gameViewModel = new GameViewModel();
-            _resultObject = await _gameViewModel.CreateQuestion(category, difficulty);
+            gameViewModel = new GameViewModel();
+            resultObject = await gameViewModel.CreateQuestion(category, difficulty);
             Dictionary<string, string> answers = new Dictionary<string, string> { };
-            answers.Add(_resultObject.Results[0].CorrectAnswer, "Correct");
-            answers.Add(_resultObject.Results[0].IncorrectAnswers[0], "Incorrect");
-            answers.Add(_resultObject.Results[0].IncorrectAnswers[1], "Incorrect");
-            answers.Add(_resultObject.Results[0].IncorrectAnswers[2], "Incorrect");
+            answers.Add(resultObject.Results[0].CorrectAnswer, "Correct");
+            answers.Add(resultObject.Results[0].IncorrectAnswers[0], "Incorrect");
+            answers.Add(resultObject.Results[0].IncorrectAnswers[1], "Incorrect");
+            answers.Add(resultObject.Results[0].IncorrectAnswers[2], "Incorrect");
 
-            asdf.Text = _resultObject.Results[0].Question;
+            asdf.Text = resultObject.Results[0].Question;
             asdf.Visibility = Visibility;
             string[] value;
 
@@ -116,7 +111,7 @@ namespace TriviaGame
                 button.Content = "Fel";
             }
 
-            _gameViewModel.Answer(category);
+            gameViewModel.Answer(category);
             // Spara resultatet, yes eller nej
             // Vems tur är det?
             // Har vi en vinnare?

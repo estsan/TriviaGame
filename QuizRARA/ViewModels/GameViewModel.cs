@@ -9,13 +9,18 @@ namespace TriviaGame.ViewModels
 {
     public class GameViewModel
     {
-        ResultObject _resultObject;
-        Game _game;
+        public ResultObject resultObject;
+        public Game game;
+
+        public GameViewModel()
+        {
+            game = new Game(new string[] { "Alice", "Bob", "Eve"});
+        }
         public async Task<ResultObject> CreateQuestion(string category, string difficulty)
         {
-            _resultObject = new ResultObject();
-            await _resultObject.CreateQuestion(category, difficulty);
-            return _resultObject;
+            resultObject = new ResultObject();
+            await resultObject.CreateQuestion(category, difficulty);
+            return resultObject;
         }
 
         internal void Answer(int category)
@@ -28,6 +33,11 @@ namespace TriviaGame.ViewModels
              
             // Har vi en vinnare?
             
+        }
+
+        internal void RollDice()
+        {
+            game.RollDice();
         }
     }
 }

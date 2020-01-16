@@ -22,14 +22,13 @@ namespace TriviaGame.Models
             }
         }
 
-        public Game(string[] _names)
+        public Game(string[] names)
         {
-            NumberOfPlayers = _names.Length;
-            int i = 0;
-            foreach (string _name in _names)
+            NumberOfPlayers = names.Length;
+            string[] colors = { "Red", "Green", "Blue", "Yellow" };
+            for (int i = 0; i < names.Length; i++)
             {
-                string[] player = _name.Split(',');
-                Player p = new Player(player[0].Trim(), player[1].Trim(), NumberOfPlayers, i);
+                Player p = new Player(names[i], colors[i], NumberOfPlayers, i);
                 Players = new Dictionary<int, Player>() { };
                 Players.Add(i, p);
                 i++;
@@ -37,6 +36,12 @@ namespace TriviaGame.Models
 
             WhosTurnIsIt = 0;
             Dice = 0;
+        }
+
+        internal void RollDice()
+        {
+            Random random = new Random();
+            Dice = random.Next(1, 7);
         }
     }
 }
