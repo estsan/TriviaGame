@@ -25,21 +25,15 @@ namespace TriviaGame
         public BoardPage()
         {
             this.InitializeComponent();
-            string[] name = new string[] { "E", "L", "J" };
-            gameViewModel = new GameViewModel(name);
-            ItemPlayer1.Visibility = Visibility.Visible;
-            TextBlockPlayer1.Text = gameViewModel.game.Players[0].Name;
-            ItemPlayer2.Visibility = Visibility.Visible;
-            TextBlockPlayer2.Text = gameViewModel.game.Players[1].Name;
-            ItemPlayer3.Visibility = Visibility.Visible;
-            TextBlockPlayer3.Text = gameViewModel.game.Players[2].Name;
             // Hårdkodat De olika spelarna. Blajblaj
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            var param = (TextBox)e.Parameter;
-            player1.Text = param.Text;
+            var param = (string)e.Parameter;
+            string[] name = param.Split('|');
+            gameViewModel = new GameViewModel(name);
+
         }
             private void RollDice(object sender, RoutedEventArgs e)
         {

@@ -31,9 +31,20 @@ namespace TriviaGame
        
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            string text1 = redplayer.Text;
+            //string text1 = redplayer.Text + "|" + greenplayer.Text;
+            string players = redplayer.Text + "|" + greenplayer.Text;
+            ComboBoxItem CBI = (ComboBoxItem)comboBoxNumber.SelectedItem;
+            int antal = int.Parse(CBI.Content.ToString());
+            if (antal >= 3)
+            {
+                players += "|" + blueplayer.Text;
+            }
+            if(antal == 4)
+            {
+                players += "|" + yellowplayer.Text;
+            }
             
-            this.Frame.Navigate(typeof(BoardPage),redplayer);
+            this.Frame.Navigate(typeof(BoardPage),players);
         }
 
         private void AddPlayers(object sender, SelectionChangedEventArgs e)
