@@ -160,6 +160,10 @@
                     <ComboBoxItem Name="player3" Content="player3"/>
                 </ComboBox>-->
 
+                <Button Grid.Row="1"
+                        Content="Walk"
+                        Click="Step"/>
+
                 <TextBlock x:Name="RollDicePlayer"
                            Grid.Column="3"
                            Grid.ColumnSpan="5"
@@ -168,7 +172,6 @@
                            FontFamily="Lobster"
                            VerticalAlignment="Center"/>
 
-
                 <Button Grid.Row="0"
                         Grid.Column="5"
                         HorizontalAlignment="Center"
@@ -176,22 +179,21 @@
                         Content="Roll"
                         Click="RollDice"/>
 
-                <TextBlock 
-                    Grid.Row="0"
-                    Grid.Column="6"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    FontSize="40"
-                    Text=""
-                    Foreground="Green"
-                    x:Name="Dice"/>
+                <TextBlock Grid.Row="0"
+                           Grid.Column="6"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="40"
+                           Text=""
+                           Foreground="Green"
+                           x:Name="Dice"/>
 
                 <Button Grid.Row="2" 
                         Grid.Column="0" 
                         Grid.ColumnSpan="2"
                         Content="Get Question"
-                        Click="GetQuestion">
-                </Button>
+                        Click="GetQuestion"/>
+
 
                 <TextBlock x:Name="asdf"
                            Grid.Row="2"

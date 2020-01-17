@@ -190,5 +190,64 @@ namespace TriviaGame
                 PiecePlayerYellowF.Visibility = Visibility.Visible;
             }
         }
+
+        private void Step(object sender, RoutedEventArgs e)
+        {
+            Player player = gameViewModel.game.WhosTurnIsIt;
+            // Flytta pjäsen, ta reda på färgen
+            // skicka efter fråga
+            int dice = gameViewModel.game.Dice;
+            int row = player.Position[0];
+            int col = player.Position[1];
+            if (row == 1)
+            {
+                if (col + dice <= 7)
+                {
+                    player.Position[1] = col + dice;
+                }
+                else
+                {
+                    player.Position[0] = col + dice - 6;
+                    player.Position[1] = 7;
+                }
+            }
+            else if (row == 7)
+            {
+                if (col - dice >= 1)
+                {
+                    player.Position[1] = col - dice;
+                }
+                else
+                {
+                    player.Position[0] = col - dice + 6;
+                    player.Position[1] = 1;
+                }
+            }
+            else if (col == 1)
+            {
+                if (row - dice >= 1)
+                {
+                    player.Position[0] = row - dice;
+                }
+                else
+                {
+                    player.Position[0] = 1;
+                    player.Position[1] = row - dice + 6;
+                }
+            }
+            else if (col == 7)
+            {
+                if (row + dice <= 7)
+                {
+                    player.Position[0] = row + dice;
+                }
+                else
+                {
+                    player.Position[0] = 7;
+                    player.Position[1] = row + dice - 6;
+                }
+            }
+            SetPosition(player);
+        }
     }
 }
