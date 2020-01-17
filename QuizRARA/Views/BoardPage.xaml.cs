@@ -33,6 +33,8 @@ namespace TriviaGame
             var param = (string)e.Parameter;
             string[] name = param.Split('|');
             gameViewModel = new GameViewModel(name);
+
+
             ItemPlayer1.Visibility = Visibility.Visible;
             ItemPlayer2.Visibility = Visibility.Visible;
 
@@ -50,6 +52,9 @@ namespace TriviaGame
                 SetPosition(players[3]);
                 ItemPlayer4.Visibility = Visibility.Visible;
             }
+
+            RollDicePlayer.Text = game.WhosTurnIsIt.Name.ToString() + ", It's your turn!";
+        
         }
         private void RollDice(object sender, RoutedEventArgs e)
         {

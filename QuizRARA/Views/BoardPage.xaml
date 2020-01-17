@@ -160,25 +160,25 @@
                     <ComboBoxItem Name="player3" Content="player3"/>
                 </ComboBox>-->
 
-                <StackPanel Grid.Row="3"
-                            Grid.Column="0" 
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Bottom">
-                    <TextBlock Text="{Binding ElementName=comboBox, Path=SelectedItem.Content}"/>
+                <TextBlock x:Name="RollDicePlayer"
+                           Grid.Column="3"
+                           Grid.ColumnSpan="5"
+                           FontSize="20"
+                           Foreground="Peru"
+                           FontFamily="Lobster"
+                           VerticalAlignment="Center"/>
 
-                    <TextBlock Text="Player 1" />
-                </StackPanel>
 
-                <Button Grid.Row="4"
-                        Grid.Column="0"
+                <Button Grid.Row="0"
+                        Grid.Column="5"
                         HorizontalAlignment="Center"
                         x:Name="pl2"
                         Content="Roll"
                         Click="RollDice"/>
 
                 <TextBlock 
-                    Grid.Row="5"
-                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.Column="6"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     FontSize="40"
