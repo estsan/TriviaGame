@@ -33,7 +33,8 @@ namespace TriviaGame
             var param = (string)e.Parameter;
             string[] name = param.Split('|');
             gameViewModel = new GameViewModel(name);
-
+            ItemPlayer1.Visibility = Visibility.Visible;
+            ItemPlayer2.Visibility = Visibility.Visible;
 
             Game game = gameViewModel.game;
             Player[] players = game.Players;
@@ -42,10 +43,12 @@ namespace TriviaGame
             if (game.NumberOfPlayers >= 3)
             {
                 SetPosition(players[2]);
+                ItemPlayer3.Visibility = Visibility.Visible;
             }
             if (game.NumberOfPlayers == 4)
             {
                 SetPosition(players[3]);
+                ItemPlayer4.Visibility = Visibility.Visible;
             }
         }
         private void RollDice(object sender, RoutedEventArgs e)
