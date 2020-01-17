@@ -12,9 +12,10 @@ namespace TriviaGame.ViewModels
         public ResultObject resultObject;
         public Game game;
 
-        public GameViewModel()
+        public GameViewModel(string[] name)
         {
-            game = new Game(new string[] { "Alice", "Bob", "Eve"});
+
+            game = new Game(name);
         }
         public async Task<ResultObject> CreateQuestion(string category, string difficulty)
         {
