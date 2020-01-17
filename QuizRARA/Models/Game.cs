@@ -11,14 +11,21 @@ namespace TriviaGame.Models
         public Player[] Players { get; set; }
         public int Dice { get; set; }
         public int NumberOfPlayers { get; set; }
-        int _whosTurnIsIt { get; set; }
-        public int WhosTurnIsIt
+        Player whosTurnIsIt { get; set; }
+        public Player WhosTurnIsIt
         {
-            get { return this._whosTurnIsIt; }
+            get { return this.whosTurnIsIt; }
             set
             {
-                if (_whosTurnIsIt <= NumberOfPlayers) { _whosTurnIsIt = 0; }
-                else { _whosTurnIsIt++; }
+                int i = Array.IndexOf(Players, this.whosTurnIsIt) + 1;
+                if (i < Players.Count())
+                {
+                    this.whosTurnIsIt = Players[i];
+                }
+                else
+                {
+                    this.whosTurnIsIt = Players[0];
+                }
             }
         }
 
@@ -33,7 +40,7 @@ namespace TriviaGame.Models
                 Players[i] = p;
             }
 
-            WhosTurnIsIt = 0;
+            WhosTurnIsIt = Players[0];
             Dice = 0;
         }
 
