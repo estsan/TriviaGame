@@ -34,8 +34,21 @@ namespace TriviaGame
             string[] name = param.Split('|');
             gameViewModel = new GameViewModel(name);
 
+
+            Game game = gameViewModel.game;
+            Player[] players = game.Players;
+            SetPosition(players[0]);
+            SetPosition(players[1]);
+            if (game.NumberOfPlayers >= 3)
+            {
+                SetPosition(players[2]);
+            }
+            if (game.NumberOfPlayers == 4)
+            {
+                SetPosition(players[3]);
+            }
         }
-            private void RollDice(object sender, RoutedEventArgs e)
+        private void RollDice(object sender, RoutedEventArgs e)
         {
             gameViewModel.RollDice();
             Dice.Text = gameViewModel.game.Dice.ToString();
@@ -125,6 +138,49 @@ namespace TriviaGame
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(StartPage));
+        }
+
+        public void SetPosition(Player p)
+        {
+            if (p.Color.ToString() == "Red")
+            {
+                Grid.SetRow(PiecePlayerRedB, p.Position[0]);
+                Grid.SetColumn(PiecePlayerRedB, p.Position[1]);
+                Grid.SetRow(PiecePlayerRedF, p.Position[0]);
+                Grid.SetColumn(PiecePlayerRedF, p.Position[1]);
+                PiecePlayerRedB.Visibility = Visibility.Visible;
+                PiecePlayerRedF.Visibility = Visibility.Visible;
+            }
+
+            else if (p.Color.ToString() == "Green")
+            {
+                Grid.SetRow(PiecePlayerGreenB, p.Position[0]);
+                Grid.SetColumn(PiecePlayerGreenB, p.Position[1]);
+                Grid.SetRow(PiecePlayerGreenF, p.Position[0]);
+                Grid.SetColumn(PiecePlayerGreenF, p.Position[1]);
+                PiecePlayerGreenB.Visibility = Visibility.Visible;
+                PiecePlayerGreenF.Visibility = Visibility.Visible;
+            }
+
+            else if (p.Color.ToString() == "Blue")
+            {
+                Grid.SetRow(PiecePlayerBlueB, p.Position[0]);
+                Grid.SetColumn(PiecePlayerBlueB, p.Position[1]);
+                Grid.SetRow(PiecePlayerBlueF, p.Position[0]);
+                Grid.SetColumn(PiecePlayerBlueF, p.Position[1]);
+                PiecePlayerBlueB.Visibility = Visibility.Visible;
+                PiecePlayerBlueF.Visibility = Visibility.Visible;
+            }
+
+            else if (p.Color.ToString() == "Yellow")
+            {
+                Grid.SetRow(PiecePlayerYellowB, p.Position[0]);
+                Grid.SetColumn(PiecePlayerYellowB, p.Position[1]);
+                Grid.SetRow(PiecePlayerYellowF, p.Position[0]);
+                Grid.SetColumn(PiecePlayerYellowF, p.Position[1]);
+                PiecePlayerYellowB.Visibility = Visibility.Visible;
+                PiecePlayerYellowF.Visibility = Visibility.Visible;
+            }
         }
     }
 }

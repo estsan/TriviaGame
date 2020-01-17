@@ -245,60 +245,59 @@
 
                 <!-- To be set with binding, Tag {Player name}, Grid.Row {Position[0]}, Grid.Row {Position[1]}, Foreground {Color} -->
                 <FontIcon Glyph="&#xEA8C;"
-                          Foreground="#FFDFEAC3"
+                          Foreground="Red"
                           Visibility="Collapsed"
-                          Tag="player1"/>
-                <FontIcon Glyph="&#xE77B;" 
-                          Foreground="#FFDFEAC3"
-                          Visibility="Collapsed"
-                          Tag="player1"/>
-
-
-                <FontIcon Glyph="&#xEA8C;"
-                          Foreground="#FFDFEAC3"
-                          Visibility="Collapsed"
-                          Tag="player2"/>
-                <FontIcon Glyph="&#xE77B;" 
-                          Foreground="#FFDFEAC3"
-                          Visibility="Collapsed"
-                          Tag="player2"/>
-
-                <FontIcon Glyph="&#xEA8C;"
-                          Foreground="#FFDFEAC3"
-                          Visibility="Collapsed"
-                          Tag="player3"/>
-                <FontIcon Glyph="&#xE77B;" 
-                          Foreground="#FFDFEAC3"
-                          Visibility="Collapsed"
-                          Tag="player3"/>
-
-                <FontIcon Glyph="&#xEA8C;"
-                          Foreground="Yellow"
-                          Visibility="Collapsed"
-                          Tag="player4"/>
+                          x:Name="PiecePlayerRedB"/>
                 <FontIcon Glyph="&#xE77B;" 
                           Foreground="Black"
                           Visibility="Collapsed"
-                          Tag="player4"/>
-                <HyperlinkButton 
-            Content="GO BACK" 
-            Grid.Row="8" 
-            Grid.ColumnSpan="8" 
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center"
-            FontSize="24"
-            Height="51"
-            Width="250"
-            Foreground="#FF69946A"
-            Opacity="0.8" 
-            FocusVisualPrimaryBrush="#00000000" 
-            Background="#335DA94B" 
-            FocusVisualSecondaryBrush="#99265C1F" 
-            BorderBrush="#FF266C37" 
-            FontWeight="Bold" 
-            FontFamily="Candara" 
-            Visibility="Visible"
-            Click="HyperlinkButton_Click"/>
+                          x:Name="PiecePlayerRedF"/>
+
+                <FontIcon Glyph="&#xEA8C;"
+                          Foreground="Green"
+                          Visibility="Collapsed"
+                          x:Name="PiecePlayerGreenB"/>
+                <FontIcon Glyph="&#xE77B;" 
+                          Foreground="Black"
+                          Visibility="Collapsed"
+                          x:Name="PiecePlayerGreenF"/>
+
+                <FontIcon Glyph="&#xEA8C;"
+                          Foreground="Blue"
+                          Visibility="Collapsed"
+                          x:Name="PiecePlayerBlueB"/>
+                <FontIcon Glyph="&#xE77B;" 
+                          Foreground="Black"
+                          Visibility="Collapsed"
+                          x:Name="PiecePlayerBlueF"/>
+
+                <FontIcon Glyph="&#xEA8C;"
+                          Foreground="DarkGoldenrod"
+                          Visibility="Collapsed"
+                          x:Name="PiecePlayerYellowB"/>
+                <FontIcon Glyph="&#xE77B;" 
+                          Foreground="Black"
+                          Visibility="Collapsed"
+                          x:Name="PiecePlayerYellowF"/>
+                
+                <HyperlinkButton Content="GO BACK" 
+                                Grid.Row="8" 
+                                Grid.ColumnSpan="8" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                FontSize="24"
+                                Height="51"
+                                Width="250"
+                                Foreground="#FF69946A"
+                                Opacity="0.8" 
+                                FocusVisualPrimaryBrush="#00000000" 
+                                Background="#335DA94B" 
+                                FocusVisualSecondaryBrush="#99265C1F" 
+                                BorderBrush="#FF266C37" 
+                                FontWeight="Bold" 
+                                FontFamily="Candara" 
+                                Visibility="Visible"
+                                Click="HyperlinkButton_Click"/>
             </Grid>
         </NavigationView>
     </Grid>
