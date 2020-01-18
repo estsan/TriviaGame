@@ -188,11 +188,11 @@
                            Foreground="Green"
                            x:Name="Dice"/>
 
-                <Button Grid.Row="2" 
+                <!--<Button Grid.Row="2" 
                         Grid.Column="0" 
                         Grid.ColumnSpan="2"
                         Content="Get Question"
-                        Click="GetQuestion"/>
+                        Click="GetQuestion"/>-->
 
 
                 <TextBlock x:Name="asdf"
