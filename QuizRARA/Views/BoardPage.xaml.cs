@@ -76,6 +76,8 @@ namespace TriviaGame
             answers.Add(resultObject.Results[0].IncorrectAnswers[0], "Incorrect");
             answers.Add(resultObject.Results[0].IncorrectAnswers[1], "Incorrect");
             answers.Add(resultObject.Results[0].IncorrectAnswers[2], "Incorrect");
+            
+            categoryblock.Text = categoryblock.Text+category;
 
             asdf.Text = resultObject.Results[0].Question;
             asdf.Visibility = Visibility;
