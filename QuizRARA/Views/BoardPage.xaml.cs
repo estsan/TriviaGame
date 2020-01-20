@@ -34,10 +34,11 @@ namespace TriviaGame
             string[] name = param.Split('|');
             gameViewModel = new GameViewModel(name);
 
-
             ItemPlayer1.Visibility = Visibility.Visible;
             ItemPlayer2.Visibility = Visibility.Visible;
-
+            TextBlockPlayer1.Text = name[0];
+            TextBlockPlayer2.Text = name[1];
+           
             Game game = gameViewModel.game;
             Player[] players = game.Players;
             SetPosition(players[0]);
@@ -46,11 +47,13 @@ namespace TriviaGame
             {
                 SetPosition(players[2]);
                 ItemPlayer3.Visibility = Visibility.Visible;
+                TextBlockPlayer3.Text = name[2];
             }
             if (game.NumberOfPlayers == 4)
             {
                 SetPosition(players[3]);
                 ItemPlayer4.Visibility = Visibility.Visible;
+                TextBlockPlayer4.Text = name[3];
             }
 
             RollDicePlayer.Text = game.WhosTurnIsIt.Name.ToString() + ", It's your turn!";
