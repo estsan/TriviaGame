@@ -26,6 +26,7 @@ namespace TriviaGame
         {
             this.InitializeComponent();
             // Hårdkodat De olika spelarna. Blajblaj
+
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -65,7 +66,7 @@ namespace TriviaGame
             Dice.Text = gameViewModel.game.Dice.ToString();
         }
 
-        private async void GetQuestion(object sender, RoutedEventArgs e)
+        private async void GetQuestion()
         {
             string category = "19";
             string difficulty = "easy";
@@ -251,6 +252,7 @@ namespace TriviaGame
                 }
             }
             SetPosition(player);
+            GetQuestion();
         }
     }
 }
