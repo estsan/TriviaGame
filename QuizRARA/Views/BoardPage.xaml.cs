@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using QuizRARA.Models;
 
 namespace TriviaGame
 {
@@ -21,6 +22,7 @@ namespace TriviaGame
     {
         ResultObject resultObject;
         GameViewModel gameViewModel;
+        BoardSquare[] boardSquares; 
 
         public BoardPage()
         {
@@ -28,9 +30,12 @@ namespace TriviaGame
             // Hårdkodat De olika spelarna. Blajblaj
 
         }
+
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            InitializeBoardSquares();
             var param = (string)e.Parameter;
             string[] name = param.Split('|');
             gameViewModel = new GameViewModel(name);
@@ -60,6 +65,7 @@ namespace TriviaGame
             RollDicePlayer.Text = game.WhosTurnIsIt.Name.ToString() + ", It's your turn!";
         
         }
+
         private void RollDice(object sender, RoutedEventArgs e)
         {
             gameViewModel.RollDice();
@@ -149,6 +155,7 @@ namespace TriviaGame
             // Har vi en vinnare?
             // Make ViewModel do this
         }
+
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(StartPage));
@@ -255,6 +262,181 @@ namespace TriviaGame
             }
             SetPosition(player);
             GetQuestion();
+        }
+
+        private void InitializeBoardSquares()
+        {
+            boardSquares = new BoardSquare[24];
+            int[] position;
+            BoardSquare boardSquare;
+
+            position = new int[] { 1, 1 };
+            boardSquare = new BoardSquare(position, "green");
+            boardSquares[0] = boardSquare;
+            Grid.SetRow(r11, position[0]);
+            Grid.SetColumn(r11, position[1]);
+            r11.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 1, 7 };
+            boardSquare = new BoardSquare(position, "green");
+            boardSquares[1] = boardSquare;
+            Grid.SetRow(r17, position[0]);
+            Grid.SetColumn(r17, position[1]);
+            r17.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 7, 1 };
+            boardSquare = new BoardSquare(position, "green");
+            boardSquares[2] = boardSquare;
+            Grid.SetRow(r71, position[0]);
+            Grid.SetColumn(r71, position[1]);
+            r71.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 7, 7 };
+            boardSquare = new BoardSquare(position, "green");
+            boardSquares[3] = boardSquare;
+            Grid.SetRow(r77, position[0]);
+            Grid.SetColumn(r77, position[1]);
+            r77.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 1, 2 };
+            boardSquare = new BoardSquare(position, "blue");
+            boardSquares[4] = boardSquare;
+            Grid.SetRow(r12, position[0]);
+            Grid.SetColumn(r12, position[1]);
+            r12.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 2, 7 };
+            boardSquare = new BoardSquare(position, "blue");
+            boardSquares[5] = boardSquare;
+            Grid.SetRow(r27, position[0]);
+            Grid.SetColumn(r27, position[1]);
+            r27.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 6, 1 };
+            boardSquare = new BoardSquare(position, "blue");
+            boardSquares[6] = boardSquare;
+            Grid.SetRow(r61, position[0]);
+            Grid.SetColumn(r61, position[1]);
+            r61.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 7, 6 };
+            boardSquare = new BoardSquare(position, "blue");
+            boardSquares[7] = boardSquare;
+            Grid.SetRow(r76, position[0]);
+            Grid.SetColumn(r76, position[1]);
+            r76.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 1, 3 };
+            boardSquare = new BoardSquare(position, "pink");
+            boardSquares[8] = boardSquare;
+            Grid.SetRow(r13, position[0]);
+            Grid.SetColumn(r13, position[1]);
+            r13.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 3, 7 };
+            boardSquare = new BoardSquare(position, "pink");
+            boardSquares[9] = boardSquare;
+            Grid.SetRow(r37, position[0]);
+            Grid.SetColumn(r37, position[1]);
+            r37.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 5, 1 };
+            boardSquare = new BoardSquare(position, "pink");
+            boardSquares[10] = boardSquare;
+            Grid.SetRow(r51, position[0]);
+            Grid.SetColumn(r51, position[1]);
+            r51.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 7, 5 };
+            boardSquare = new BoardSquare(position, "pink");
+            boardSquares[11] = boardSquare;
+            Grid.SetRow(r75, position[0]);
+            Grid.SetColumn(r75, position[1]);
+            r75.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 1, 4 };
+            boardSquare = new BoardSquare(position, "yellow");
+            boardSquares[12] = boardSquare;
+            Grid.SetRow(r14, position[0]);
+            Grid.SetColumn(r14, position[1]);
+            r14.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 4, 1 };
+            boardSquare = new BoardSquare(position, "yellow");
+            boardSquares[13] = boardSquare;
+            Grid.SetRow(r41, position[0]);
+            Grid.SetColumn(r41, position[1]);
+            r41.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 4, 7 };
+            boardSquare = new BoardSquare(position, "yellow");
+            boardSquares[14] = boardSquare;
+            Grid.SetRow(r47, position[0]);
+            Grid.SetColumn(r47, position[1]);
+            r47.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 7, 4 };
+            boardSquare = new BoardSquare(position, "yellow");
+            boardSquares[15] = boardSquare;
+            Grid.SetRow(r74, position[0]);
+            Grid.SetColumn(r74, position[1]);
+            r74.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 1, 5 };
+            boardSquare = new BoardSquare(position, "red");
+            boardSquares[16] = boardSquare;
+            Grid.SetRow(r15, position[0]);
+            Grid.SetColumn(r15, position[1]);
+            r15.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 3, 1 };
+            boardSquare = new BoardSquare(position, "red");
+            boardSquares[17] = boardSquare;
+            Grid.SetRow(r31, position[0]);
+            Grid.SetColumn(r31, position[1]);
+            r31.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 5, 7 };
+            boardSquare = new BoardSquare(position, "red");
+            boardSquares[18] = boardSquare;
+            Grid.SetRow(r57, position[0]);
+            Grid.SetColumn(r57, position[1]);
+            r57.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 7, 3 };
+            boardSquare = new BoardSquare(position, "red");
+            boardSquares[19] = boardSquare;
+            Grid.SetRow(r73, position[0]);
+            Grid.SetColumn(r73, position[1]);
+            r73.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 1, 6 };
+            boardSquare = new BoardSquare(position, "purple");
+            boardSquares[20] = boardSquare;
+            Grid.SetRow(r16, position[0]);
+            Grid.SetColumn(r16, position[1]);
+            r16.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 2, 1 };
+            boardSquare = new BoardSquare(position, "purple");
+            boardSquares[21] = boardSquare;
+            Grid.SetRow(r21, position[0]);
+            Grid.SetColumn(r21, position[1]);
+            r21.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 6, 7 };
+            boardSquare = new BoardSquare(position, "purple");
+            boardSquares[22] = boardSquare;
+            Grid.SetRow(r67, position[0]);
+            Grid.SetColumn(r67, position[1]);
+            r67.Stroke = boardSquare.Stroke;
+
+            position = new int[] { 7, 2 };
+            boardSquare = new BoardSquare(position, "purple");
+            boardSquares[23] = boardSquare;
+            Grid.SetRow(r72, position[0]);
+            Grid.SetColumn(r72, position[1]);
+            r72.Stroke = boardSquare.Stroke;
         }
     }
 }

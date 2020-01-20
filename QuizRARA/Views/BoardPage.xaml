@@ -125,30 +125,30 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Rectangle Grid.Row="1" Grid.Column="1" Stroke="Green" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="2" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="3" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="4" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="5" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="6" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
-                <Rectangle Grid.Row="2" Grid.Column="1" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="2" Grid.Column="7" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="3" Grid.Column="1" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="3" Grid.Column="7" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="4" Grid.Column="1" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="4" Grid.Column="7" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="5" Grid.Column="1" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="5" Grid.Column="7" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="6" Grid.Column="1" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="6" Grid.Column="7" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="1" Stroke="Green" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="2" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="3" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="4" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="5" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="6" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
+                <Rectangle x:Name="r11" StrokeThickness="10"/>
+                <Rectangle x:Name="r12" StrokeThickness="10"/>
+                <Rectangle x:Name="r13" StrokeThickness="10"/>
+                <Rectangle x:Name="r14" StrokeThickness="10"/>
+                <Rectangle x:Name="r15" StrokeThickness="10"/>
+                <Rectangle x:Name="r16" StrokeThickness="10"/>
+                <Rectangle x:Name="r17" StrokeThickness="10"/>
+                <Rectangle x:Name="r21" StrokeThickness="10"/>
+                <Rectangle x:Name="r27" StrokeThickness="10"/>
+                <Rectangle x:Name="r31" StrokeThickness="10"/>
+                <Rectangle x:Name="r37" StrokeThickness="10"/>
+                <Rectangle x:Name="r41" StrokeThickness="10"/>
+                <Rectangle x:Name="r47" StrokeThickness="10"/>
+                <Rectangle x:Name="r51" StrokeThickness="10"/>
+                <Rectangle x:Name="r57" StrokeThickness="10"/>
+                <Rectangle x:Name="r61" StrokeThickness="10"/>
+                <Rectangle x:Name="r67" StrokeThickness="10"/>
+                <Rectangle x:Name="r71" StrokeThickness="10"/>
+                <Rectangle x:Name="r72" StrokeThickness="10"/>
+                <Rectangle x:Name="r73" StrokeThickness="10"/>
+                <Rectangle x:Name="r74" StrokeThickness="10"/>
+                <Rectangle x:Name="r75" StrokeThickness="10"/>
+                <Rectangle x:Name="r76" StrokeThickness="10"/>
+                <Rectangle x:Name="r77" StrokeThickness="10"/>
 
                 <!-- Is supposed to Be a dice, and animate when button is clicked -->
                 <!--<ComboBox Grid.Row="0"
