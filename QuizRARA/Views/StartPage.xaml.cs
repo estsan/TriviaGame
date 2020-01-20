@@ -1,19 +1,11 @@
-﻿using TriviaGame.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using System;
+using TriviaGame.Models;
+using TriviaGame.ViewModels;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using TriviaGame.Models;
+
+
 
 namespace TriviaGame
 {
@@ -31,20 +23,30 @@ namespace TriviaGame
        
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
+            
             //string text1 = redplayer.Text + "|" + greenplayer.Text;
             string players = redplayer.Text + "|" + greenplayer.Text;
             ComboBoxItem CBI = (ComboBoxItem)comboBoxNumber.SelectedItem;
-            int antal = int.Parse(CBI.Content.ToString());
-            if (antal >= 3)
+            if(CBI!=null)
             {
-                players += "|" + blueplayer.Text;
+                int antal = int.Parse(CBI.Content.ToString());
+                if (antal >= 3)
+                {
+                    players += "|" + blueplayer.Text;
+                }
+                if (antal == 4)
+                {
+                    players += "|" + yellowplayer.Text;
+                }
+
+                this.Frame.Navigate(typeof(BoardPage), players);
             }
-            if(antal == 4)
+            else
             {
-                players += "|" + yellowplayer.Text;
+                MessageDialog dialog = new MessageDialog("You should select a player first", "Alert");
+                dialog.ShowAsync();
             }
-            
-            this.Frame.Navigate(typeof(BoardPage),players);
+          
         }
 
         private void AddPlayers(object sender, SelectionChangedEventArgs e)
