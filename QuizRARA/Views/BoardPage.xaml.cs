@@ -78,15 +78,40 @@ namespace TriviaGame
             BoardSquare boardSquare = boardSquares.Where(x => x.GridRow == position[0] && x.GridColumn == position[1]).First();
             string difficulty = "easy";
             resultObject = await gameViewModel.CreateQuestion(boardSquare.Category, difficulty);
+            string[] answers = new string[4] {
+                resultObject.Results[0].CorrectAnswer,
+                resultObject.Results[0].IncorrectAnswers[0],
+                resultObject.Results[0].IncorrectAnswers[1],
+                resultObject.Results[0].IncorrectAnswers[2]
+            };
+            answers = RandomizeStrings(answers);
+            QuestionText.Visibility = Visibility.Visible;
+            Answer1.Visibility = Visibility.Visible;
+            Answer2.Visibility = Visibility.Visible;
+            Answer3.Visibility = Visibility.Visible;
+            Answer4.Visibility = Visibility.Visible;
+
+            QuestionText.Text = resultObject.Results[0].Question;
+            Answer1.Content = answers[0];
+            Answer2.Content = answers[1];
+            Answer3.Content = answers[2];
+            Answer4.Content = answers[3];
         }
 
-        public string[] RandomValue(Dictionary<string,string> dict)
+        public string[] RandomizeStrings(string[] answers)
         {
             Random rand = new Random();
-            List<string> list = dict.Keys.ToList();
-            string key = list[rand.Next(0, list.Count)];
-            string[] KVP = { key, dict[key] };
-            return KVP;
+
+            // For each spot in the array, pick
+            // a random item to swap into that spot.
+            for (int i = 0; i < answers.Length - 1; i++)
+            {
+                int j = rand.Next(i, answers.Length);
+                string temp = answers[i];
+                answers[i] = answers[j];
+                answers[j] = temp;
+            }
+            return answers;
         }
 
         private void Answer(object sender, RoutedEventArgs e)
