@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuizRARA.Models;
+using Windows.UI.Popups;
 
 namespace TriviaGame.ViewModels
 {
@@ -13,6 +14,7 @@ namespace TriviaGame.ViewModels
         public ResultObject resultObject;
         public Game game;
         public BoardSquare[] boardSquares;
+        public bool IsCurrentAnswerCorrect;
 
         public GameViewModel(string[] name)
         {
@@ -122,6 +124,9 @@ namespace TriviaGame.ViewModels
             boardSquares[23] = boardSquare;
 
         }
+
+
+
         public async Task<ResultObject> CreateQuestion(int[] category, string difficulty)
         {
             resultObject = new ResultObject();
@@ -129,16 +134,39 @@ namespace TriviaGame.ViewModels
             return resultObject;
         }
 
-        internal void Answer(int category)
+        internal void Answer(string answer)
         {
+            if (answer == resultObject.Results[0].CorrectAnswer)
+            {
+                IsCurrentAnswerCorrect = true;
+            }
+            else
+            {
+                IsCurrentAnswerCorrect = false;
+            }
+
+            if(!IsCurrentAnswerCorrect)
+            {
+                game.WhosTurnIsIt = new Player("","",0,0);
+            }
+            else
+            {
+                // Nothing happens yet if the answer is correct.
+            }
+
+            if (game.WhosTurnIsIt.Green && game.WhosTurnIsIt.Red && game.WhosTurnIsIt.Blue && game.WhosTurnIsIt.Yellow && game.WhosTurnIsIt.Pink && game.WhosTurnIsIt.Purple)
+            {
+                MessageDialog dialog = new MessageDialog(game.WhosTurnIsIt.Name + ", WON", "WE HAVE A WINNER");
+                dialog.ShowAsync();
+            }
             // Spara resultatet, yes eller nej
 
 
             // Vems tur är det?
             //_game.WhosTurnIsIt++;
-             
+
             // Har vi en vinnare?
-            
+
         }
 
         internal void RollDice()

@@ -117,18 +117,17 @@ namespace TriviaGame
         private void Answer(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            
-            // Is it correct? Display if it is correct or not, also
-            if (button.Tag.ToString() == "Correct")
-            {
-                button.Content = "Rätt";
-            }
-            else
-            {
-                button.Content = "Fel";
-            }
+            gameViewModel.Answer((string)button.Content);
+            RollDicePlayer.Text = gameViewModel.game.WhosTurnIsIt.Name.ToString() + ", It's your turn!";
+            QuestionText.Visibility = Visibility.Collapsed;
+            Answer1.Visibility = Visibility.Collapsed;
+            Answer2.Visibility = Visibility.Collapsed;
+            Answer3.Visibility = Visibility.Collapsed;
+            Answer4.Visibility = Visibility.Collapsed;
 
-            gameViewModel.Answer(9);
+            // Is it correct? Display if it is correct or not, also
+
+
             // Spara resultatet, yes eller nej
             // Vems tur är det?
             // Har vi en vinnare?
