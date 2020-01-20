@@ -196,7 +196,7 @@
                         Click="GetQuestion"/>-->
 
 
-                <TextBlock x:Name="asdf"
+                <TextBlock x:Name="QuestionText"
                            Grid.Row="2"
                            Grid.Column="3"
                            Grid.ColumnSpan="3"
@@ -205,7 +205,7 @@
                            Visibility="Collapsed"
                            VerticalAlignment="Center"
                            Text=""/>
-                <Button x:Name="a"
+                <Button x:Name="Answer1"
                         Grid.Row="3"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
@@ -214,7 +214,7 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
-                <Button x:Name="s"
+                <Button x:Name="Answer2"
                         Grid.Row="4"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
@@ -223,7 +223,7 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
-                <Button x:Name="d"
+                <Button x:Name="Answer3"
                         Grid.Row="5"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
@@ -232,7 +232,7 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
-                <Button x:Name="f"
+                <Button x:Name="Answer4"
                         Grid.Row="6"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
