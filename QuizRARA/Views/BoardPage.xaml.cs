@@ -74,16 +74,17 @@ namespace TriviaGame
 
         private async void GetQuestion()
         {
-            int[] category = new int[] { 10, 11, 12 };
+            int[] pos = gameViewModel.game.WhosTurnIsIt.Position;
+            BoardSquare bS = boardSquares.Where(x => x.GridRow == pos[0] && x.GridColumn == pos[1]).First();
             string difficulty = "easy";
-            resultObject = await gameViewModel.CreateQuestion(category, difficulty);
+            resultObject = await gameViewModel.CreateQuestion(bS.Category, difficulty);
             Dictionary<string, string> answers = new Dictionary<string, string> { };
             answers.Add(resultObject.Results[0].CorrectAnswer, "Correct");
             answers.Add(resultObject.Results[0].IncorrectAnswers[0], "Incorrect");
             answers.Add(resultObject.Results[0].IncorrectAnswers[1], "Incorrect");
             answers.Add(resultObject.Results[0].IncorrectAnswers[2], "Incorrect");
             
-            categoryblock.Text = categoryblock.Text+category;
+            //categoryblock.Text = categoryblock.Text+category;
 
             asdf.Text = resultObject.Results[0].Question;
             asdf.Visibility = Visibility;
