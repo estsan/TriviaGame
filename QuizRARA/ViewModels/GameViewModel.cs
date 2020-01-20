@@ -17,7 +17,7 @@ namespace TriviaGame.ViewModels
 
             game = new Game(name);
         }
-        public async Task<ResultObject> CreateQuestion(string category, string difficulty)
+        public async Task<ResultObject> CreateQuestion(int[] category, string difficulty)
         {
             resultObject = new ResultObject();
             await resultObject.CreateQuestion(category, difficulty);

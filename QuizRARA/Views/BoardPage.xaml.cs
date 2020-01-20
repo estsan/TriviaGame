@@ -68,7 +68,7 @@ namespace TriviaGame
 
         private async void GetQuestion()
         {
-            string category = "19";
+            int[] category = new int[] { 10, 11, 12 };
             string difficulty = "easy";
             resultObject = await gameViewModel.CreateQuestion(category, difficulty);
             Dictionary<string, string> answers = new Dictionary<string, string> { };

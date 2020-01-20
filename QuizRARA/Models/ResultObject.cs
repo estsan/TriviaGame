@@ -17,23 +17,15 @@ namespace TriviaGame.Models
         [JsonProperty("results")]
         public Result[] Results { get; set; }
 
-        public async Task<ResultObject> CreateQuestion(string category, string difficulty)
+        public async Task<ResultObject> CreateQuestion(int[] categoryNumbers, string difficulty)
         {
-            // Geografi = 22
-
-            // Animals = 27
-            // Science and nature = 17
-
-            // Books = 10
-            // Music = 12
-            // Film = 11
-
-            // Celebrities = 26
-
-            // Mythology = 20
-
-            // General Knowledge = 9
-
+            string category;
+            Random random = new Random();
+            int index;
+            
+            index = random.Next(0, categoryNumbers.Length);
+            category = categoryNumbers[index].ToString();
+            
             // Difficulties = easy, meduim, hard
 
             string url = "https://opentdb.com/api.php?amount=1&category=" + category + "&difficulty=" + difficulty + "&type=multiple";
