@@ -312,7 +312,7 @@
                           Foreground="Black"
                           Visibility="Collapsed"
                           x:Name="PiecePlayerYellowF"/>
-                
+
                 <HyperlinkButton Content="GO BACK" 
                                 Grid.Row="8" 
                                 Grid.ColumnSpan="2" 
@@ -331,19 +331,6 @@
                                 FontFamily="Candara" 
                                 Visibility="Visible"
                                 Click="HyperlinkButton_Click"/>
-                <TextBlock 
-                                x:Name="categoryblock" 
-                                Text="Current Category:" 
-                                FontSize="20"
-                                Grid.Row="8" 
-                                Grid.ColumnSpan="8" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center"
-                                Foreground="#FF69946A"
-                                Opacity="0.8" 
-                                FocusVisualPrimaryBrush="#00000000" 
-                                FontWeight="Bold" 
-                                FontFamily="Candara" />
             </Grid>
         </NavigationView>
     </Grid>
