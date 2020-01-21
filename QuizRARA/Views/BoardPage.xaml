@@ -190,14 +190,23 @@
                     <ComboBoxItem Name="player3" Content="player3"/>
                 </ComboBox>-->
 
-                <Button Grid.Row="1"
-                        Margin="25,0,0,0"
+                <Button Grid.Row="0"
+                        Grid.Column="7"
+                        Opacity="0.6"
+                        Margin="10,0,0,0"
                         Content="WALK"
+                        FontSize="22"
+                        Foreground="Green"
+                        FontWeight="Bold"
+                        Width="100"
+                        Background="Transparent"
+                        BorderBrush="Green"
+                        BorderThickness="3"
                         Click="Step"/>
 
                 <TextBlock x:Name="RollDicePlayer"
-                           Grid.Column="3"
-                           Grid.ColumnSpan="5"
+                           Grid.Column="4"
+                           Grid.ColumnSpan="2"
                            FontSize="20"
                            Foreground="Peru"
                            FontFamily="Lobster"
@@ -205,15 +214,24 @@
 
                 <Button Grid.Row="0"
                         Grid.Column="5"
+                        FontSize="22"
+                        Foreground="Green"
+                        FontWeight="Bold"
+                        Width="100"
+                        Opacity="0.6"
+                        Background="Transparent"
+                        BorderBrush="Green"
+                        BorderThickness="3"
                         HorizontalAlignment="Center"
                         x:Name="pl2"
-                        Content="Roll"
+                        Content="ROLL"
                         Click="RollDice"/>
 
                 <TextBlock Grid.Row="0"
                            Grid.Column="6"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
+                           FontWeight="Bold"
                            FontSize="40"
                            Text=""
                            Foreground="Green"

@@ -130,7 +130,7 @@
                         Visibility="Collapsed">
                 <TextBlock Text="YELLOW"
                            FontSize="30"
-                           Foreground="Yellow"
+                           Foreground="DarkGoldenrod"
                            Width="120"/>
                 <TextBox 
                     x:Name="yellowplayer"
