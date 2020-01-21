@@ -32,12 +32,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer1" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer1"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
@@ -51,12 +51,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer2" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer2"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
@@ -70,12 +70,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer3" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer3"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
@@ -89,12 +89,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer4" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer4"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
@@ -155,30 +155,30 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Rectangle Grid.Row="1" Grid.Column="1" Stroke="Green" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="2" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="3" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="4" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="5" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="6" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="1" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
-                <Rectangle Grid.Row="2" Grid.Column="1" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="2" Grid.Column="7" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="3" Grid.Column="1" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="3" Grid.Column="7" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="4" Grid.Column="1" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="4" Grid.Column="7" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="5" Grid.Column="1" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="5" Grid.Column="7" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="6" Grid.Column="1" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="6" Grid.Column="7" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="1" Stroke="Green" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="2" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="3" Stroke="Red" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="4" Stroke="DarkGoldenrod" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="5" Stroke="DeepPink" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="6" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
+                <Rectangle x:Name="r11" StrokeThickness="10"/>
+                <Rectangle x:Name="r12" StrokeThickness="10"/>
+                <Rectangle x:Name="r13" StrokeThickness="10"/>
+                <Rectangle x:Name="r14" StrokeThickness="10"/>
+                <Rectangle x:Name="r15" StrokeThickness="10"/>
+                <Rectangle x:Name="r16" StrokeThickness="10"/>
+                <Rectangle x:Name="r17" StrokeThickness="10"/>
+                <Rectangle x:Name="r21" StrokeThickness="10"/>
+                <Rectangle x:Name="r27" StrokeThickness="10"/>
+                <Rectangle x:Name="r31" StrokeThickness="10"/>
+                <Rectangle x:Name="r37" StrokeThickness="10"/>
+                <Rectangle x:Name="r41" StrokeThickness="10"/>
+                <Rectangle x:Name="r47" StrokeThickness="10"/>
+                <Rectangle x:Name="r51" StrokeThickness="10"/>
+                <Rectangle x:Name="r57" StrokeThickness="10"/>
+                <Rectangle x:Name="r61" StrokeThickness="10"/>
+                <Rectangle x:Name="r67" StrokeThickness="10"/>
+                <Rectangle x:Name="r71" StrokeThickness="10"/>
+                <Rectangle x:Name="r72" StrokeThickness="10"/>
+                <Rectangle x:Name="r73" StrokeThickness="10"/>
+                <Rectangle x:Name="r74" StrokeThickness="10"/>
+                <Rectangle x:Name="r75" StrokeThickness="10"/>
+                <Rectangle x:Name="r76" StrokeThickness="10"/>
+                <Rectangle x:Name="r77" StrokeThickness="10"/>
 
                 <!-- Is supposed to Be a dice, and animate when button is clicked -->
                 <!--<ComboBox Grid.Row="0"
@@ -226,7 +226,7 @@
                         Click="GetQuestion"/>-->
 
 
-                <TextBlock x:Name="asdf"
+                <TextBlock x:Name="QuestionText"
                            Grid.Row="2"
                            Grid.Column="3"
                            Grid.ColumnSpan="3"
@@ -235,7 +235,7 @@
                            Visibility="Collapsed"
                            VerticalAlignment="Center"
                            Text=""/>
-                <Button x:Name="a"
+                <Button x:Name="Answer1"
                         Grid.Row="3"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
@@ -244,7 +244,7 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
-                <Button x:Name="s"
+                <Button x:Name="Answer2"
                         Grid.Row="4"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
@@ -253,7 +253,7 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
-                <Button x:Name="d"
+                <Button x:Name="Answer3"
                         Grid.Row="5"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
@@ -262,7 +262,7 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
-                <Button x:Name="f"
+                <Button x:Name="Answer4"
                         Grid.Row="6"
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
