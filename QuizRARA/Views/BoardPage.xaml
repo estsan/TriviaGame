@@ -32,12 +32,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer1" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player1"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer1"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer1"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
@@ -51,12 +51,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer2" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player2"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer2"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer2"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
@@ -70,12 +70,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer3" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player3"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer3"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer3"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
@@ -89,12 +89,12 @@
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer4" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIcon1Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIcon2Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIcon3Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIcon4Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIcon5Player4"/>
-                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIcon6Player4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DeepPink" x:Name="FontIconPinkPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="DarkGoldenrod" x:Name="FontIconYellowPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Red" x:Name="FontIconRedPlayer4"/>
+                            <FontIcon Glyph="&#xE734;" Foreground="Purple" x:Name="FontIconPurplePlayer4"/>
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>

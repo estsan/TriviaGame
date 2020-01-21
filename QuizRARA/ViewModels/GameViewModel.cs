@@ -151,21 +151,58 @@ namespace TriviaGame.ViewModels
             }
             else
             {
-                // Nothing happens yet if the answer is correct.
+                string category = resultObject.Results[0].Category;
+                Player currentPlayer = game.WhosTurnIsIt;
+                if (category == "Geography" && !currentPlayer.Green)
+                {
+                    currentPlayer.Green = true;
+                    game.WhosTurnIsIt = new Player("","",0,0);
+                }
+                if ((category == "Animals" || category == "Science & Nature") && !currentPlayer.Red)
+                {
+                    currentPlayer.Red = true;
+                    game.WhosTurnIsIt = new Player("", "", 0, 0);
+                }
+                if ((category == "Entertainment: Books" || category == "Entertainment: Film" || category == "Entertainment: Music") && !currentPlayer.Purple)
+                {
+                    currentPlayer.Purple = true;
+                    game.WhosTurnIsIt = new Player("", "", 0, 0);
+                }
+                if (category == "Celebrities" && !currentPlayer.Pink)
+                {
+                    currentPlayer.Pink = true;
+                    game.WhosTurnIsIt = new Player("", "", 0, 0);
+                }
+                if (category == "Mythology" && !currentPlayer.Yellow)
+                {
+                    currentPlayer.Yellow = true;
+                    game.WhosTurnIsIt = new Player("", "", 0, 0);
+                }
+                if (category == "General Knowledge" && !currentPlayer.Blue)
+                {
+                    currentPlayer.Blue = true;
+                    game.WhosTurnIsIt = new Player("", "", 0, 0);
+                }
             }
 
-            if (game.WhosTurnIsIt.Green && game.WhosTurnIsIt.Red && game.WhosTurnIsIt.Blue && game.WhosTurnIsIt.Yellow && game.WhosTurnIsIt.Pink && game.WhosTurnIsIt.Purple)
+            foreach (Player player in game.Players)
             {
-                MessageDialog dialog = new MessageDialog(game.WhosTurnIsIt.Name + ", WON", "WE HAVE A WINNER");
+                if (player.Green && player.Red && player.Blue && player.Yellow && player.Pink && player.Purple)
+                {
+                    MessageDialog dialog = new MessageDialog(game.WhosTurnIsIt.Name + ", WON", "WE HAVE A WINNER");
+                    dialog.ShowAsync();
+                }
+            }
+            if (IsCurrentAnswerCorrect)
+            {
+                MessageDialog dialog = new MessageDialog("Correct!");
                 dialog.ShowAsync();
             }
-            // Spara resultatet, yes eller nej
-
-
-            // Vems tur är det?
-            //_game.WhosTurnIsIt++;
-
-            // Har vi en vinnare?
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Wrong...");
+                dialog.ShowAsync();
+            }
 
         }
 

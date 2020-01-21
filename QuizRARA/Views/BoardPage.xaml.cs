@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using QuizRARA.Models;
+using Windows.UI.Popups;
 
 namespace TriviaGame
 {
@@ -22,7 +23,7 @@ namespace TriviaGame
     {
         ResultObject resultObject;
         GameViewModel gameViewModel;
-        BoardSquare[] boardSquares; 
+        BoardSquare[] boardSquares;
 
         public BoardPage()
         {
@@ -44,7 +45,7 @@ namespace TriviaGame
             ItemPlayer2.Visibility = Visibility.Visible;
             TextBlockPlayer1.Text = name[0];
             TextBlockPlayer2.Text = name[1];
-           
+
             Game game = gameViewModel.game;
             Player[] players = game.Players;
             SetPosition(players[0]);
@@ -63,7 +64,7 @@ namespace TriviaGame
             }
 
             RollDicePlayer.Text = game.WhosTurnIsIt.Name.ToString() + ", It's your turn!";
-        
+
         }
 
         private void RollDice(object sender, RoutedEventArgs e)
@@ -124,6 +125,79 @@ namespace TriviaGame
             Answer2.Visibility = Visibility.Collapsed;
             Answer3.Visibility = Visibility.Collapsed;
             Answer4.Visibility = Visibility.Collapsed;
+
+            if (gameViewModel.IsCurrentAnswerCorrect)
+            {
+                string category = gameViewModel.resultObject.Results[0].Category;
+
+                Player player = gameViewModel.game.Players[0];
+                if (category == "Geography" && player.Green)
+                    FontIconGreenPlayer1.Glyph = "\uE735";
+                else if ((category == "Animals" || category == "Science & Nature" ) && player.Red)
+                    FontIconRedPlayer1.Glyph = "\uE735";
+                else if ((category == "Entertainment: Books" || category == "Entertainment: Film" || category == "Entertainment: Music") && player.Purple)
+                    FontIconPurplePlayer1.Glyph = "\uE735";
+                else if (category == "Celebrities" && player.Pink)
+                    FontIconPinkPlayer1.Glyph = "\uE735";
+                else if (category == "Mythology" && player.Yellow)
+                    FontIconYellowPlayer1.Glyph = "\uE735";
+                else if (category == "General Knowledge" && player.Blue)
+                    FontIconBluePlayer1.Glyph = "\uE735";
+
+                player = gameViewModel.game.Players[1];
+                if (category == "Geography" && player.Green)
+                    FontIconGreenPlayer2.Glyph = "\uE735";
+                else if ((category == "Animals" || category == "Science & Nature") && player.Red)
+                    FontIconRedPlayer2.Glyph = "\uE735";
+                else if ((category == "Entertainment: Books" || category == "Entertainment: Film" || category == "Entertainment: Music") && player.Purple)
+                    FontIconPurplePlayer2.Glyph = "\uE735";
+                else if (category == "Celebrities" && player.Pink)
+                    FontIconPinkPlayer2.Glyph = "\uE735";
+                else if (category == "Mythology" && player.Yellow)
+                    FontIconYellowPlayer2.Glyph = "\uE735";
+                else if (category == "General Knowledge" && player.Blue)
+                    FontIconBluePlayer2.Glyph = "\uE735";
+
+                if (gameViewModel.game.Players.Length > 2)
+                {
+                    player = gameViewModel.game.Players[2];
+                    if (category == "Geography" && player.Green)
+                        FontIconGreenPlayer3.Glyph = "\uE735";
+                    else if ((category == "Animals" || category == "Science & Nature") && player.Red)
+                        FontIconRedPlayer3.Glyph = "\uE735";
+                    else if ((category == "Entertainment: Books" || category == "Entertainment: Film" || category == "Entertainment: Music") && player.Purple)
+                        FontIconPurplePlayer3.Glyph = "\uE735";
+                    else if (category == "Celebrities" && player.Pink)
+                        FontIconPinkPlayer3.Glyph = "\uE735";
+                    else if (category == "Mythology" && player.Yellow)
+                        FontIconYellowPlayer3.Glyph = "\uE735";
+                    else if (category == "General Knowledge" && player.Blue)
+                        FontIconBluePlayer3.Glyph = "\uE735";
+                }
+
+                if (gameViewModel.game.Players.Length > 3)
+                {
+                        player = gameViewModel.game.Players[3];
+                    if (category == "Geography" && player.Green)
+                        FontIconGreenPlayer4.Glyph = "\uE735";
+                    else if ((category == "Animals" || category == "Science & Nature") && player.Red)
+                        FontIconRedPlayer4.Glyph = "\uE735";
+                    else if ((category == "Entertainment: Books" || category == "Entertainment: Film" || category == "Entertainment: Music") && player.Purple)
+                        FontIconPurplePlayer4.Glyph = "\uE735";
+                    else if (category == "Celebrities" && player.Pink)
+                        FontIconPinkPlayer4.Glyph = "\uE735";
+                    else if (category == "Mythology" && player.Yellow)
+                        FontIconYellowPlayer4.Glyph = "\uE735";
+                    else if (category == "General Knowledge" && player.Blue)
+                        FontIconBluePlayer4.Glyph = "\uE735";
+                }
+            }
+            
+
+
+
+
+
 
             // Is it correct? Display if it is correct or not, also
 
