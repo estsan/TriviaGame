@@ -41,16 +41,20 @@
                 Grid.Column="0">
             <TextBlock 
                 Text="CHOOSE NUMBER OF PLAYERS"
-                FontSize="20"
-                FontFamily="Consolas"
+                Margin="50,0,0,0"
+                FontSize="25"
                 Foreground="#FF147E13"
                 TextDecorations="Underline" FocusVisualSecondaryBrush="#FF147E13" FontWeight="Bold"/>
             <ComboBox 
                 HorizontalAlignment="Left" 
-                Margin="10,0,0,0"
-                Height="30" 
+                Margin="15,0,0,0"
+                BorderBrush="Green"
+                Opacity="0.5"
+                Height="35" 
+                FontSize="20"
+                Foreground="Green"
                 VerticalAlignment="Top" 
-                Width="226"
+                Width="260"
                 Background="Transparent"
                 SelectionChanged="AddPlayers"
                 x:Name="comboBoxNumber">
@@ -64,7 +68,8 @@
         <StackPanel Orientation="Vertical"
                 Grid.Row="2"
                 Grid.Column="0"
-                VerticalAlignment="Center">
+                VerticalAlignment="Center"
+                    Margin="50,0,0,0" >
 
             <StackPanel x:Name="player1"
                         Orientation="Horizontal" 
@@ -77,7 +82,7 @@
                 <TextBox x:Name="redplayer"
                     PlaceholderText="Player 1"
                     Width="150"
-                    Height="30"
+                    Height="35"
                     Margin="51,0,0,15"
                     FontSize="20"
                     Background="Transparent"
@@ -95,7 +100,7 @@
                     x:Name="greenplayer"
                     PlaceholderText="Player 2"
                     Width="150"
-                    Height="30"
+                    Height="35"
                     Margin="51,0,0,15"
                     FontSize="20"
                     Background="Transparent"
@@ -113,7 +118,7 @@
                     x:Name="blueplayer"
                     PlaceholderText="Player 3"
                     Width="150"
-                    Height="30"
+                    Height="35"
                     Margin="51,0,0,15"
                     FontSize="20"
                     Background="Transparent"
@@ -131,7 +136,7 @@
                     x:Name="yellowplayer"
                     PlaceholderText="Player 4"
                     Width="150"
-                    Height="30"
+                    Height="35"
                     Margin="51,0,0,15"
                     FontSize="20"
                     Background="Transparent"
@@ -145,14 +150,11 @@
                 Grid.Column="1"
                 HorizontalAlignment="Center"
                 Text="RULES"
-                FontSize="20"
-                FontFamily="Consolas"
+                FontSize="25"
                 TextDecorations="Underline"
-                Foreground="#FF147E13" 
-                Height="24" 
-                Margin="0,0.333,0,0" 
+                Foreground="Green"  
                 Grid.RowSpan="2" 
-                VerticalAlignment="Top" 
+                VerticalAlignment="Top"
                 FontWeight="Bold">
             <TextBlock.FocusVisualSecondaryBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -163,8 +165,9 @@
         </TextBlock>
         <!-- Third row, second column -->
         <Border 
-                BorderBrush="LightGray" 
-                BorderThickness="2" 
+                BorderBrush="Green" 
+                BorderThickness="1" 
+                Opacity="0.7"
                 Grid.Row="2" 
                 Grid.Column="1"
                 Height="210px" 
@@ -176,11 +179,10 @@
                     Height="200"
                     TextWrapping="Wrap"
                     HorizontalAlignment="Center"
-                    FontFamily="Consolas"
-                    Foreground="Olive"
+                    Foreground="Green"
                     Opacity="0.8"
-                    FontSize="10">
-                <Run Text="-Number of players must be between 2-4.&#x0a;&#x0a;-You roll the dice and take steps according to the number given on the dice.&#x0a;&#x0a;-Every color on the board represents a category. If you get the correct answer in a category you have collected a star of that color. If your answer is wrong you get a new chance to collect the star next time you are at the same category.&#x0a;&#x0a;-If you hit 6 on the dice you may play once again, othervise its the next players turn.&#x0a;&#x0a;-The main goal is to collect a star in every possible category/color. The first one to collect all the stars win.&#x0a;&#x0a;&#x0a;                                     GOOD LUCK!"/>
+                    FontSize="12">
+                <Run Text="-Number of players must be between 2-4.&#x0a;&#x0a;-You roll the dice and take steps according to the number given on the dice.&#x0a;&#x0a;-Every color on the board represents a category. If you get the correct answer in a category you have collected a star of that color. If your answer is wrong you get a new chance to collect the star next time you are at the same category.&#x0a;&#x0a;-If your answer is correct you may roll the dice again. &#x0a;&#x0a;-The main goal is to collect a star in every possible category/color. The first one to collect all the stars win.&#x0a;&#x0a;&#x0a;                                     GOOD LUCK!"/>
             </TextBlock>
         </Border>
         <!-- Fourth row -->
