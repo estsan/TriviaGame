@@ -13,7 +13,7 @@
 
 
         <NavigationView x:Name="NavView"
-                        IsBackButtonVisible="Collapsed"
+                        IsBackButtonVisible="Visible"
                         IsSettingsVisible="false"
                         IsPaneOpen="false"
                         Background="#FFDFEAC3">
@@ -99,6 +99,36 @@
                     </StackPanel>
                 </NavigationViewItem>
 
+                    <TextBlock Text="CATEGORIES:" FontSize="15" Foreground="green" FontWeight="Bold" Margin="90,0,0,0"></TextBlock>
+               <Grid Width="220">
+                   <FontIcon Glyph="&#xE7C8;" Foreground="Red" HorizontalAlignment="Left"/>
+                   <TextBlock Text="Animals, Science or Nature " FontSize="15" Foreground="Red" Margin="30,0,0,0" ></TextBlock>
+               </Grid>
+
+               <Grid Width="220">
+                    <FontIcon Glyph="&#xE7C8;" Foreground="Green" HorizontalAlignment="left"/>
+                    <TextBlock Text="Geography"  FontSize="15" Foreground="Green" Margin="30,0,0,0"></TextBlock>
+               </Grid>
+
+               <Grid Width="220">
+                    <FontIcon Glyph="&#xE7C8;" Foreground="Blue" HorizontalAlignment="left"/>
+                    <TextBlock Text="General Knowledge" FontSize="15" Foreground="Blue" Margin="30,0,0,0"></TextBlock>
+               </Grid>
+
+               <Grid Width="220">
+                    <FontIcon Glyph="&#xE7C8;" Foreground="Purple" HorizontalAlignment="left"/>
+                    <TextBlock Text="Books, Film or Music" FontSize="15" Foreground="Purple" Margin="30,0,0,0"></TextBlock>
+               </Grid>
+
+               <Grid Width="220">
+                    <FontIcon Glyph="&#xE7C8;" Foreground="DarkGoldenrod" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Mythology" FontSize="15" Foreground="DarkGoldenrod" Margin="30,0,0,0"></TextBlock>
+               </Grid>
+
+               <Grid Width="220">
+                    <FontIcon Glyph="&#xE7C8;" Foreground="DeepPink" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Celebrities " FontSize="15" Foreground="DeepPink" Margin="30,0,0,0"></TextBlock>
+               </Grid>
 
             </NavigationView.MenuItems>
             <Grid>
