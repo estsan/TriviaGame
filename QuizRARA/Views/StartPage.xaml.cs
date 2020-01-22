@@ -21,7 +21,7 @@ namespace TriviaGame
             _game = new Game(h); //name,color
         }
        
-        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        private void LetsPlay(object sender, RoutedEventArgs e)
         {
             
             //string text1 = redplayer.Text + "|" + greenplayer.Text;
