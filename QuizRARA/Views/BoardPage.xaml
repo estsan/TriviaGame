@@ -10,18 +10,16 @@
 
     <!-- Here is where the game board is -->
     <Grid Background="#FFDFEAC3">
-
-
         <NavigationView x:Name="NavView"
                         IsBackButtonVisible="Collapsed"
                         IsSettingsVisible="false"
-                        IsPaneOpen="false">
-
+                        IsPaneOpen="true">
+            <!-- Panel on left side -->
             <NavigationView.MenuItems>
                 <NavigationViewItem x:Name="ItemPlayer1"
                                     Icon="Contact"
                                     Foreground="Red"
-                                    Visibility="Visible">
+                                    Visibility="Collapsed">
                     <StackPanel Orientation="Vertical">
                         <TextBlock x:Name="TextBlockPlayer1" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -85,10 +83,8 @@
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
-
-                <TextBlock Text="CATEGORIES:" FontSize="15" Foreground="green" FontWeight="Bold" Margin="90,0,0,0"/>
-
-                <!--<NavigationViewItem>
+                
+                <NavigationViewItem>
                     <TextBlock Foreground="Green"
                                Text="CATEGORIES:"
                                FontSize="15"
@@ -101,41 +97,51 @@
                         <FontIcon Glyph="&#xE7C8;" Foreground="Red"/>
                     </NavigationViewItem.Icon>
                     <TextBlock Foreground="Red"
-                               Text="Animals, Science or Nature"/>
-                </NavigationViewItem>-->
+                               Text="Animals, Science and Nature"/>
+                </NavigationViewItem>
 
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7C8;" Foreground="Green"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Foreground="Green"
+                               Text="Geography"/>
+                </NavigationViewItem>
 
-                <Grid Width="220">
-                    <FontIcon Glyph="&#xE7C8;" Foreground="Red" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Animals, Science or Nature " FontSize="15" Foreground="Red" Margin="30,0,0,0" ></TextBlock>
-                </Grid>
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7C8;" Foreground="Blue"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Foreground="Blue"
+                               Text="General Knowledge"/>
+                </NavigationViewItem>
 
-                <Grid Width="220">
-                    <FontIcon Glyph="&#xE7C8;" Foreground="Green" HorizontalAlignment="left"/>
-                    <TextBlock Text="Geography"  FontSize="15" Foreground="Green" Margin="30,0,0,0"></TextBlock>
-                </Grid>
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7C8;" Foreground="Purple"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Foreground="Purple"
+                               Text="Books, Films and Music"/>
+                </NavigationViewItem>
 
-                <Grid Width="220">
-                    <FontIcon Glyph="&#xE7C8;" Foreground="Blue" HorizontalAlignment="left"/>
-                    <TextBlock Text="General Knowledge" FontSize="15" Foreground="Blue" Margin="30,0,0,0"></TextBlock>
-                </Grid>
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7C8;" Foreground="DarkGoldenrod"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Foreground="DarkGoldenrod"
+                               Text="Mythology"/>
+                </NavigationViewItem>
 
-                <Grid Width="220">
-                    <FontIcon Glyph="&#xE7C8;" Foreground="Purple" HorizontalAlignment="left"/>
-                    <TextBlock Text="Books, Film or Music" FontSize="15" Foreground="Purple" Margin="30,0,0,0"></TextBlock>
-                </Grid>
-
-                <Grid Width="220">
-                    <FontIcon Glyph="&#xE7C8;" Foreground="DarkGoldenrod" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Mythology" FontSize="15" Foreground="DarkGoldenrod" Margin="30,0,0,0"></TextBlock>
-                </Grid>
-
-                <Grid Width="220">
-                    <FontIcon Glyph="&#xE7C8;" Foreground="DeepPink" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Celebrities " FontSize="15" Foreground="DeepPink" Margin="30,0,0,0"></TextBlock>
-                </Grid>
-
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7C8;" Foreground="HotPink"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Foreground="HotPink"
+                               Text="Celebrities"/>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
+            
+            <!-- Board -->
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -160,6 +166,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
+                <!-- The stepping squares -->
                 <Rectangle x:Name="r11" StrokeThickness="10"/>
                 <Rectangle x:Name="r12" StrokeThickness="10"/>
                 <Rectangle x:Name="r13" StrokeThickness="10"/>
@@ -185,30 +192,7 @@
                 <Rectangle x:Name="r76" StrokeThickness="10"/>
                 <Rectangle x:Name="r77" StrokeThickness="10"/>
 
-                <!-- Is supposed to Be a dice, and animate when button is clicked -->
-                <!--<ComboBox Grid.Row="0"
-                          Grid.Column="2" 
-                          Name="comboBox"
-                          VerticalAlignment="Bottom" Margin="0,0,0,39">
-                    <ComboBoxItem Name="player1" Content="player1"/>
-                    <ComboBoxItem Name="player2" Content="player2"/>
-                    <ComboBoxItem Name="player3" Content="player3"/>
-                </ComboBox>-->
-
-                <Button Grid.Row="0"
-                        Grid.Column="7"
-                        Opacity="0.4"
-                        HorizontalAlignment="Center"
-                        Content="WALK"
-                        FontSize="15"
-                        Foreground="Green"
-                        FontWeight="Bold"
-                        Width="100"
-                        Background="Transparent"
-                        BorderBrush="Green"
-                        BorderThickness="3"
-                        Click="Step"/>
-
+                <!-- Text to indicate who's turn it is -->
                 <TextBlock x:Name="RollDicePlayer"
                            Grid.Column="3"
                            Grid.ColumnSpan="2"
@@ -216,7 +200,8 @@
                            Foreground="Peru"
                            FontFamily="Lobster"
                            VerticalAlignment="Center"/>
-
+                
+                <!-- Button to roll the dice -->
                 <Button Grid.Row="0"
                         Grid.Column="5"
                         FontSize="15"
@@ -231,7 +216,8 @@
                         x:Name="pl2"
                         Content="ROLL"
                         Click="RollDice"/>
-
+                
+                <!-- Text to display dice-number -->
                 <TextBlock Grid.Row="0"
                            Grid.Column="6"
                            HorizontalAlignment="Center"
@@ -241,14 +227,23 @@
                            Text=""
                            Foreground="Green"
                            x:Name="Dice"/>
-
-                <!--<Button Grid.Row="2" 
-                        Grid.Column="0" 
-                        Grid.ColumnSpan="2"
-                        Content="Get Question"
-                        Click="GetQuestion"/>-->
-
-
+                
+                <!-- Button to make piece step -->
+                <Button Grid.Row="0"
+                        Grid.Column="7"
+                        Opacity="0.4"
+                        HorizontalAlignment="Center"
+                        Content="WALK"
+                        FontSize="15"
+                        Foreground="Green"
+                        FontWeight="Bold"
+                        Width="100"
+                        Background="Transparent"
+                        BorderBrush="Green"
+                        BorderThickness="3"
+                        Click="Step"/>
+                
+                <!-- The question -->
                 <TextBlock x:Name="QuestionText"
                            Grid.Row="2"
                            Grid.Column="3"
@@ -258,6 +253,8 @@
                            Visibility="Collapsed"
                            VerticalAlignment="Center"
                            Text=""/>
+                
+                <!-- First alternative -->
                 <Button x:Name="Answer1"
                         Grid.Row="3"
                         Grid.Column="3"
@@ -267,6 +264,8 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
+                
+                <!-- Second alternative -->
                 <Button x:Name="Answer2"
                         Grid.Row="4"
                         Grid.Column="3"
@@ -276,6 +275,8 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
+                
+                <!-- Third alternative -->
                 <Button x:Name="Answer3"
                         Grid.Row="5"
                         Grid.Column="3"
@@ -285,6 +286,8 @@
                         Content=""
                         Visibility="Collapsed"
                         Click="Answer"/>
+                
+                <!-- Fourth alternative -->
                 <Button x:Name="Answer4"
                         Grid.Row="6"
                         Grid.Column="3"
@@ -295,11 +298,7 @@
                         Visibility="Collapsed"
                         Click="Answer"/>
 
-
-                <!-- To be set elsewhere one time: Foreground, T -->
-                <!-- To be set elsewhere Again and again: Grid.Row, Grid.Column -->
-
-                <!-- To be set with binding, Tag {Player name}, Grid.Row {Position[0]}, Grid.Row {Position[1]}, Foreground {Color} -->
+                <!-- Piece of player one -->
                 <FontIcon Glyph="&#xEA8C;"
                           Foreground="Red"
                           Visibility="Collapsed"
@@ -309,6 +308,7 @@
                           Visibility="Collapsed"
                           x:Name="PiecePlayerRedF"/>
 
+                <!-- Piece of player two -->
                 <FontIcon Glyph="&#xEA8C;"
                           Foreground="Green"
                           Visibility="Collapsed"
@@ -318,6 +318,7 @@
                           Visibility="Collapsed"
                           x:Name="PiecePlayerGreenF"/>
 
+                <!-- Piece of player three -->
                 <FontIcon Glyph="&#xEA8C;"
                           Foreground="Blue"
                           Visibility="Collapsed"
@@ -327,6 +328,7 @@
                           Visibility="Collapsed"
                           x:Name="PiecePlayerBlueF"/>
 
+                <!-- Piece of player three -->
                 <FontIcon Glyph="&#xEA8C;"
                           Foreground="DarkGoldenrod"
                           Visibility="Collapsed"
@@ -335,8 +337,9 @@
                           Foreground="Black"
                           Visibility="Collapsed"
                           x:Name="PiecePlayerYellowF"/>
-
-                <HyperlinkButton Content="GO BACK" 
+                
+                <!-- Button to go back to the start page -->
+                <!--<HyperlinkButton Content="GO BACK" 
                                 Grid.Row="8" 
                                 Grid.ColumnSpan="2" 
                                 HorizontalAlignment="Center" 
@@ -353,7 +356,7 @@
                                 FontWeight="Bold" 
                                 FontFamily="Candara" 
                                 Visibility="Visible"
-                                Click="HyperlinkButton_Click"/>
+                                Click="HyperlinkButton_Click"/>-->
             </Grid>
         </NavigationView>
     </Grid>
