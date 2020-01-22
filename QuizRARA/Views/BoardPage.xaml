@@ -13,7 +13,7 @@
         <NavigationView x:Name="NavView"
                         IsBackButtonVisible="Collapsed"
                         IsSettingsVisible="false"
-                        IsPaneOpen="true">
+                        Loaded="ClosePane">
             <!-- Panel on left side -->
             <NavigationView.MenuItems>
                 <!-- Players -->

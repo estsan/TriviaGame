@@ -441,5 +441,11 @@ namespace TriviaGame
             Grid.SetColumn(r72, boardSquare.GridColumn);
             r72.Stroke = boardSquare.Stroke;
         }
+
+        private void ClosePane(object sender, RoutedEventArgs e)
+        {
+            NavigationView nv = (NavigationView)sender;
+            nv.IsPaneOpen = false;
+        }
     }
 }
