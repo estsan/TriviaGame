@@ -16,6 +16,7 @@
                         IsPaneOpen="true">
             <!-- Panel on left side -->
             <NavigationView.MenuItems>
+                <!-- Players -->
                 <NavigationViewItem x:Name="ItemPlayer1"
                                     Icon="Contact"
                                     Foreground="Red"
@@ -32,7 +33,6 @@
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
-
                 <NavigationViewItem x:Name="ItemPlayer2"
                                     Icon="Contact"
                                     Foreground="Green"
@@ -49,7 +49,6 @@
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
-
                 <NavigationViewItem x:Name="ItemPlayer3"
                                     Icon="Contact"
                                     Foreground="Blue"
@@ -66,7 +65,6 @@
                         </StackPanel>
                     </StackPanel>
                 </NavigationViewItem>
-
                 <NavigationViewItem x:Name="ItemPlayer4"
                                     Icon="Contact"
                                     Foreground="DarkGoldenrod"
@@ -84,6 +82,7 @@
                     </StackPanel>
                 </NavigationViewItem>
                 
+                <!-- Heading for the categories -->
                 <NavigationViewItem>
                     <TextBlock Foreground="Green"
                                Text="CATEGORIES:"
@@ -92,6 +91,7 @@
                                Margin="32,0,0,0"/>
                 </NavigationViewItem>
 
+                <!-- Category explanations -->
                 <NavigationViewItem>
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Red"/>
@@ -99,7 +99,6 @@
                     <TextBlock Foreground="Red"
                                Text="Animals, Science and Nature"/>
                 </NavigationViewItem>
-
                 <NavigationViewItem>
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Green"/>
@@ -107,7 +106,6 @@
                     <TextBlock Foreground="Green"
                                Text="Geography"/>
                 </NavigationViewItem>
-
                 <NavigationViewItem>
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Blue"/>
@@ -115,7 +113,6 @@
                     <TextBlock Foreground="Blue"
                                Text="General Knowledge"/>
                 </NavigationViewItem>
-
                 <NavigationViewItem>
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Purple"/>
@@ -123,7 +120,6 @@
                     <TextBlock Foreground="Purple"
                                Text="Books, Films and Music"/>
                 </NavigationViewItem>
-
                 <NavigationViewItem>
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="DarkGoldenrod"/>
@@ -131,7 +127,6 @@
                     <TextBlock Foreground="DarkGoldenrod"
                                Text="Mythology"/>
                 </NavigationViewItem>
-
                 <NavigationViewItem>
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="HotPink"/>
