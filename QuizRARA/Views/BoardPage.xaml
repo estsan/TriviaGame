@@ -15,8 +15,7 @@
         <NavigationView x:Name="NavView"
                         IsBackButtonVisible="Visible"
                         IsSettingsVisible="false"
-                        IsPaneOpen="false"
-                        Background="#FFDFEAC3">
+                        IsPaneOpen="false">
 
             <NavigationView.MenuItems>
 
@@ -193,7 +192,7 @@
                 <Button Grid.Row="0"
                         Grid.Column="7"
                         Opacity="0.4"
-                        Margin="10,0,0,0"
+                        HorizontalAlignment="Center"
                         Content="WALK"
                         FontSize="15"
                         Foreground="Green"
