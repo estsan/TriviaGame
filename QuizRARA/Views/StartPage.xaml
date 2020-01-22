@@ -63,12 +63,15 @@
                            Foreground="Red"
                            Width="120"/>
                 <TextBox x:Name="redplayer"
-                         PlaceholderText="Player 1"
-                         Width="150"
-                         Height="35"
-                         Margin="51,0,0,15"
-                         FontSize="20"
-                         Background="Transparent"/>
+                    PlaceholderText="Player 1"
+                    Width="150"
+                    Height="35"
+                    Margin="51,0,0,15"
+                    FontSize="20"
+                    Foreground="Green"
+                    Background="Transparent"
+                    BorderThickness="1"
+                    BorderBrush="Green"/>
             </StackPanel>
             <StackPanel x:Name="player2"
                         Orientation="Horizontal" 
@@ -78,14 +81,17 @@
                            FontSize="30"
                            Foreground="Green"
                            Width="120"/>
-                <TextBox x:Name="greenplayer"
-                         PlaceholderText="Player 2"
-                         Width="150"
-                         Height="35"
-                         Margin="51,0,0,15"
-                         FontSize="20"
-                         Background="Transparent"
-                         BorderThickness="0" />
+                <TextBox 
+                    x:Name="greenplayer"
+                    PlaceholderText="Player 2"
+                    Width="150"
+                    Height="35"
+                    Margin="51,0,0,15"
+                    FontSize="20"
+                    Foreground="Green"
+                    Background="Transparent"
+                    BorderThickness="1"
+                    BorderBrush="Green" />
             </StackPanel>
             <StackPanel x:Name="player3"
                         Orientation="Horizontal" 
@@ -102,8 +108,10 @@
                     Height="35"
                     Margin="51,0,0,15"
                     FontSize="20"
+                    Foreground="Green"
                     Background="Transparent"
-                    BorderThickness="0" />
+                    BorderThickness="1"
+                    BorderBrush="Green" />
             </StackPanel>
             <StackPanel x:Name="player4"
                         Orientation="Horizontal" 
@@ -120,8 +128,10 @@
                     Height="35"
                     Margin="51,0,0,15"
                     FontSize="20"
+                    Foreground="Green"
                     Background="Transparent"
-                    BorderThickness="0" />
+                    BorderThickness="1"
+                    BorderBrush="Green" />
             </StackPanel>
         </StackPanel>
 
