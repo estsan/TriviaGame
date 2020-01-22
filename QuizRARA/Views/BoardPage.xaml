@@ -13,24 +13,17 @@
 
 
         <NavigationView x:Name="NavView"
-                        IsBackButtonVisible="Visible"
+                        IsBackButtonVisible="Collapsed"
                         IsSettingsVisible="false"
-                        IsPaneOpen="false"
-                        Background="#FFDFEAC3">
+                        IsPaneOpen="false">
 
             <NavigationView.MenuItems>
-
-                <!-- &#xE735; -->
-                <!-- Props som ska sättas vid initialisering: Item:Visibility, TextBlock:Text -->
-                <!-- Props som ska sättas under spelets gång: FontIcon: Glyph -->
                 <NavigationViewItem x:Name="ItemPlayer1"
                                     Icon="Contact"
                                     Foreground="Red"
-                                    Visibility="Collapsed"
-                                    IsEnabled="false"
-                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                                    Visibility="Visible">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock  x:Name="TextBlockPlayer1" Foreground="Black"/>
+                        <TextBlock x:Name="TextBlockPlayer1" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
                             <FontIcon Glyph="&#xE734;" Foreground="Green" x:Name="FontIconGreenPlayer1"/>
                             <FontIcon Glyph="&#xE734;" Foreground="Blue" x:Name="FontIconBluePlayer1"/>
@@ -45,9 +38,7 @@
                 <NavigationViewItem x:Name="ItemPlayer2"
                                     Icon="Contact"
                                     Foreground="Green"
-                                    Visibility="Collapsed"
-                                    IsEnabled="false"
-                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                                    Visibility="Collapsed">
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer2" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -64,9 +55,7 @@
                 <NavigationViewItem x:Name="ItemPlayer3"
                                     Icon="Contact"
                                     Foreground="Blue"
-                                    Visibility="Collapsed"
-                                    IsEnabled="false"
-                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                                    Visibility="Collapsed">
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer3" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -83,9 +72,7 @@
                 <NavigationViewItem x:Name="ItemPlayer4"
                                     Icon="Contact"
                                     Foreground="DarkGoldenrod"
-                                    Visibility="Collapsed"
-                                    IsEnabled="false"
-                                    IsSelected="{Binding ElementName=player1, Path=IsSelected, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                                    Visibility="Collapsed">
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer4" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -99,36 +86,54 @@
                     </StackPanel>
                 </NavigationViewItem>
 
-                    <TextBlock Text="CATEGORIES:" FontSize="15" Foreground="green" FontWeight="Bold" Margin="90,0,0,0"></TextBlock>
-               <Grid Width="220">
-                   <FontIcon Glyph="&#xE7C8;" Foreground="Red" HorizontalAlignment="Left"/>
-                   <TextBlock Text="Animals, Science or Nature " FontSize="15" Foreground="Red" Margin="30,0,0,0" ></TextBlock>
-               </Grid>
+                <TextBlock Text="CATEGORIES:" FontSize="15" Foreground="green" FontWeight="Bold" Margin="90,0,0,0"/>
 
-               <Grid Width="220">
+                <!--<NavigationViewItem>
+                    <TextBlock Foreground="Green"
+                               Text="CATEGORIES:"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Margin="32,0,0,0"/>
+                </NavigationViewItem>
+
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7C8;" Foreground="Red"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Foreground="Red"
+                               Text="Animals, Science or Nature"/>
+                </NavigationViewItem>-->
+
+
+                <Grid Width="220">
+                    <FontIcon Glyph="&#xE7C8;" Foreground="Red" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Animals, Science or Nature " FontSize="15" Foreground="Red" Margin="30,0,0,0" ></TextBlock>
+                </Grid>
+
+                <Grid Width="220">
                     <FontIcon Glyph="&#xE7C8;" Foreground="Green" HorizontalAlignment="left"/>
                     <TextBlock Text="Geography"  FontSize="15" Foreground="Green" Margin="30,0,0,0"></TextBlock>
-               </Grid>
+                </Grid>
 
-               <Grid Width="220">
+                <Grid Width="220">
                     <FontIcon Glyph="&#xE7C8;" Foreground="Blue" HorizontalAlignment="left"/>
                     <TextBlock Text="General Knowledge" FontSize="15" Foreground="Blue" Margin="30,0,0,0"></TextBlock>
-               </Grid>
+                </Grid>
 
-               <Grid Width="220">
+                <Grid Width="220">
                     <FontIcon Glyph="&#xE7C8;" Foreground="Purple" HorizontalAlignment="left"/>
                     <TextBlock Text="Books, Film or Music" FontSize="15" Foreground="Purple" Margin="30,0,0,0"></TextBlock>
-               </Grid>
+                </Grid>
 
-               <Grid Width="220">
+                <Grid Width="220">
                     <FontIcon Glyph="&#xE7C8;" Foreground="DarkGoldenrod" HorizontalAlignment="Left"/>
                     <TextBlock Text="Mythology" FontSize="15" Foreground="DarkGoldenrod" Margin="30,0,0,0"></TextBlock>
-               </Grid>
+                </Grid>
 
-               <Grid Width="220">
+                <Grid Width="220">
                     <FontIcon Glyph="&#xE7C8;" Foreground="DeepPink" HorizontalAlignment="Left"/>
                     <TextBlock Text="Celebrities " FontSize="15" Foreground="DeepPink" Margin="30,0,0,0"></TextBlock>
-               </Grid>
+                </Grid>
 
             </NavigationView.MenuItems>
             <Grid>
