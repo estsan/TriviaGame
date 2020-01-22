@@ -192,10 +192,10 @@
 
                 <Button Grid.Row="0"
                         Grid.Column="7"
-                        Opacity="0.6"
+                        Opacity="0.4"
                         Margin="10,0,0,0"
                         Content="WALK"
-                        FontSize="22"
+                        FontSize="15"
                         Foreground="Green"
                         FontWeight="Bold"
                         Width="100"
@@ -205,7 +205,7 @@
                         Click="Step"/>
 
                 <TextBlock x:Name="RollDicePlayer"
-                           Grid.Column="4"
+                           Grid.Column="3"
                            Grid.ColumnSpan="2"
                            FontSize="20"
                            Foreground="Peru"
@@ -214,11 +214,11 @@
 
                 <Button Grid.Row="0"
                         Grid.Column="5"
-                        FontSize="22"
+                        FontSize="15"
                         Foreground="Green"
                         FontWeight="Bold"
                         Width="100"
-                        Opacity="0.6"
+                        Opacity="0.4"
                         Background="Transparent"
                         BorderBrush="Green"
                         BorderThickness="3"

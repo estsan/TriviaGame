@@ -41,7 +41,7 @@
                 Grid.Column="0">
             <TextBlock 
                 Text="CHOOSE NUMBER OF PLAYERS"
-                Margin="50,0,0,0"
+                Margin="45,0,0,0"
                 FontSize="25"
                 Foreground="#FF147E13"
                 TextDecorations="Underline" FocusVisualSecondaryBrush="#FF147E13" FontWeight="Bold"/>
@@ -170,18 +170,18 @@
                 Opacity="0.7"
                 Grid.Row="2" 
                 Grid.Column="1"
-                Height="210px" 
+                Height="360px" 
                 Width="510">
             <TextBlock 
                     Grid.Row="2"
                     Grid.Column="1"
                     Width="500"
-                    Height="200"
+                    Height="350"
                     TextWrapping="Wrap"
                     HorizontalAlignment="Center"
                     Foreground="Green"
                     Opacity="0.8"
-                    FontSize="12">
+                    FontSize="15">
                 <Run Text="-Number of players must be between 2-4.&#x0a;&#x0a;-You roll the dice and take steps according to the number given on the dice.&#x0a;&#x0a;-Every color on the board represents a category. If you get the correct answer in a category you have collected a star of that color. If your answer is wrong you get a new chance to collect the star next time you are at the same category.&#x0a;&#x0a;-If your answer is correct you may roll the dice again. &#x0a;&#x0a;-The main goal is to collect a star in every possible category/color. The first one to collect all the stars win.&#x0a;&#x0a;&#x0a;                                     GOOD LUCK!"/>
             </TextBlock>
         </Border>
