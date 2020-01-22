@@ -20,7 +20,8 @@
                 <NavigationViewItem x:Name="ItemPlayer1"
                                     Icon="Contact"
                                     Foreground="Red"
-                                    Visibility="Collapsed">
+                                    Visibility="Visible"
+                                    IsEnabled="False">
                     <StackPanel Orientation="Vertical">
                         <TextBlock x:Name="TextBlockPlayer1" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -36,7 +37,8 @@
                 <NavigationViewItem x:Name="ItemPlayer2"
                                     Icon="Contact"
                                     Foreground="Green"
-                                    Visibility="Collapsed">
+                                    Visibility="Collapsed"
+                                    IsEnabled="False">
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer2" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -52,7 +54,8 @@
                 <NavigationViewItem x:Name="ItemPlayer3"
                                     Icon="Contact"
                                     Foreground="Blue"
-                                    Visibility="Collapsed">
+                                    Visibility="Collapsed"
+                                    IsEnabled="False">
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer3" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -68,7 +71,8 @@
                 <NavigationViewItem x:Name="ItemPlayer4"
                                     Icon="Contact"
                                     Foreground="DarkGoldenrod"
-                                    Visibility="Collapsed">
+                                    Visibility="Collapsed"
+                                    IsEnabled="False">
                     <StackPanel Orientation="Vertical">
                         <TextBlock  x:Name="TextBlockPlayer4" Foreground="Black"/>
                         <StackPanel Orientation="Horizontal">
@@ -83,7 +87,7 @@
                 </NavigationViewItem>
                 
                 <!-- Heading for the categories -->
-                <NavigationViewItem>
+                <NavigationViewItem IsEnabled="False">
                     <TextBlock Foreground="Green"
                                Text="CATEGORIES:"
                                FontSize="15"
@@ -92,42 +96,42 @@
                 </NavigationViewItem>
 
                 <!-- Category explanations -->
-                <NavigationViewItem>
+                <NavigationViewItem IsEnabled="False">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Red"/>
                     </NavigationViewItem.Icon>
                     <TextBlock Foreground="Red"
                                Text="Animals, Science and Nature"/>
                 </NavigationViewItem>
-                <NavigationViewItem>
+                <NavigationViewItem IsEnabled="False">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Green"/>
                     </NavigationViewItem.Icon>
                     <TextBlock Foreground="Green"
                                Text="Geography"/>
                 </NavigationViewItem>
-                <NavigationViewItem>
+                <NavigationViewItem IsEnabled="False">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Blue"/>
                     </NavigationViewItem.Icon>
                     <TextBlock Foreground="Blue"
                                Text="General Knowledge"/>
                 </NavigationViewItem>
-                <NavigationViewItem>
+                <NavigationViewItem IsEnabled="False">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="Purple"/>
                     </NavigationViewItem.Icon>
                     <TextBlock Foreground="Purple"
                                Text="Books, Films and Music"/>
                 </NavigationViewItem>
-                <NavigationViewItem>
+                <NavigationViewItem IsEnabled="False">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="DarkGoldenrod"/>
                     </NavigationViewItem.Icon>
                     <TextBlock Foreground="DarkGoldenrod"
                                Text="Mythology"/>
                 </NavigationViewItem>
-                <NavigationViewItem>
+                <NavigationViewItem IsEnabled="False">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7C8;" Foreground="HotPink"/>
                     </NavigationViewItem.Icon>
