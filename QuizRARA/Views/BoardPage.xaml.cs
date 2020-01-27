@@ -71,6 +71,12 @@ namespace TriviaGame
         {
             gameViewModel.RollDice();
             Dice.Text = gameViewModel.game.Dice.ToString();
+            pl2.IsEnabled = false;
+            if (pl2.IsEnabled == false)
+            {
+                buttonwalk.IsEnabled = true;
+            }
+
         }
 
         private async void GetQuestion()
@@ -314,6 +320,12 @@ namespace TriviaGame
             }
             SetPosition(player);
             GetQuestion();
+            
+            if (buttonwalk.IsEnabled == true)
+            {
+                pl2.IsEnabled = true;
+                buttonwalk.IsEnabled = false;
+            }
         }
 
         private void InitializeBoardSquares()
