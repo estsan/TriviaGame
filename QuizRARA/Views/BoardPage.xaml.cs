@@ -198,7 +198,8 @@ namespace TriviaGame
                         FontIconBluePlayer4.Glyph = "\uE735";
                 }
             }
-            
+            pl2.IsEnabled = true;
+
 
 
 
@@ -323,7 +324,7 @@ namespace TriviaGame
             
             if (buttonwalk.IsEnabled == true)
             {
-                pl2.IsEnabled = true;
+                //pl2.IsEnabled = true;
                 buttonwalk.IsEnabled = false;
             }
         }
